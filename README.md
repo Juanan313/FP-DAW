@@ -15,3 +15,4 @@ Este repertorio contiene proyectos realizados en los distintos modulos
 
 En este repertorio encontraremos ejercicios de *Python* resueltos de la pagina 
 [Codewars](https://www.codewars.com/dashboard) .
+Y otros de los videos del curso de *Python* de [Udacity](https://www.udacity.com/course/intro-to-computer-science--cs101).
