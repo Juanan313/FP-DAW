@@ -1,0 +1,13 @@
+CREATE TABLE Presence (
+  Student_name VARCHAR(20),
+  Present VARCHAR(3),
+  Absence_authorized VARCHAR(3)
+);
+
+INSERT INTO Presence VALUES ('Stef','Yes','');
+INSERT INTO Presence VALUES ('Jamal','Yes','');
+INSERT INTO Presence VALUES ('Adam','Yes','');
+INSERT INTO Presence VALUES ('Kieran','Yes','');
+INSERT INTO Presence VALUES ('Dylan','Yes','');
+INSERT INTO Presence VALUES ('Sophie','No','Yes');
+INSERT INTO Presence VALUES ('Max','No','No');

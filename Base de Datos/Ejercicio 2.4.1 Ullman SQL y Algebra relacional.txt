@@ -1,0 +1,21 @@
+#a) What PC models have a speed of at least 3.00? 
+SELECT Model FROM PC WHERE speed >= 3.00
+pi model sigma speed ≥ 3.00 PC
+#b) Which manufacturers make laptops with a hard disk of at least 100GB? 
+SELECT DISTINCT maker FROM Laptop NATURAL JOIN Product WHERE hd >= 100 AND type!=('pc')
+pi maker sigma !(type='pc') AND hd >=100 (Product ⨝ Laptop)
+#c) Find the model number and price of all products (of any type) made by manufacturer B. 
+SELECT DISTINCT model,price FROM Product NATURAL JOIN PC  WHERE maker = 'B' UNION
+SELECT DISTINCT model,price FROM Product NATURAL JOIN Printer WHERE maker = 'B' UNION
+SELECT DISTINCT model,price FROM Product NATURAL JOIN Laptop WHERE maker = 'B'
+
+pi model,price sigma maker = 'B' (PC ⨝ Product) ∪
+pi model,price sigma maker = 'B' (Laptop ⨝ Product) ∪
+pi model,price sigma maker = 'B' (PC ⨝ Product)
+
+#d) Find the model numbers of all color laser printers. 
+SELECT model FROM Printer WHERE color = True
+pi model sigma color = True Printer
+#e) Find those manufacturers that sell Laptops, but not PC’s. 
+SELECT maker FROM Product WHERE type = 'pc'
+pi maker sigma type = 'pc' Product
