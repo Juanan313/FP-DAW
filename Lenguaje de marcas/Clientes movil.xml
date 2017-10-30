@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rootElement CLIENTES "PublicIdentifier" "URIreference"[declarations]>
+<!-- -->
+<clientes>
+    <cliente tPersona = Jurídica>
+        <nombre> Juan Palomares</nombre>
+        <número>614158942</número>
+        <Móvil marcaMóvil = Samsung modeloMóvil = Galaxy note 4></Móvil>       
+        <tarifa minutos=500 datos= 10Gb>XL</tarifa>
+        <antigüedad permanencia= "22/01/2018">3 año/s</antigüedad>
+    </cliente>
+     <cliente tPersona = Jurídica>
+        <nombre> Pablo Rubio</nombre>
+        <número> 685471251 </número>
+        <móvil marcaMóvil = Apple modeloMóvil= Iphone 7></móvil>
+        <tarifa minutos=500 datos= 10Gb>XL</tarifa>
+        <antigüedad permanencia= "No"> 5 año/s</antigüedad>
+    </cliente>
+     <cliente tPersona = Física>
+        <nombre> Carlos Maimo</nombre>
+        <número>614417985</número>
+        <móvil marcaMóvil= Huawei modeloMóvil= Y3></móvil>
+        <tarifa minutos=200 datos= 500 mb>Xs</tarifa>
+        <antigüedad permanencia= "22/01/2018"> 1 año/s</antigüedad>
+    </cliente>
+</clientes>
+
+
