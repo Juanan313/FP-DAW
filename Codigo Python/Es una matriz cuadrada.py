@@ -1,14 +1,13 @@
-def MatrizCuadrada (matriz):
-    
-   if len(matriz) == len(matriz[0]):
-       return True
-   else:
-       return False
+#def MatrizCuadrada (matriz):   
+#   if len(matriz) == len(matriz[0]):
+#       return True
+#   else:
+#       return False
 
 def esMatrizCuadrada (matriz):
-   longMatriz = len(matriz)
-   for element in matriz:
-       if not longMatriz == len(element):
+   filasMatriz = len(matriz)
+   for fila in matriz:
+       if not filasMatriz == len(fila):
            return False
    else:
        return True
