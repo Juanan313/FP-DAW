@@ -30,7 +30,7 @@ def hacerDictRandom (libreria):
     return playList
     assert isinstance(playList,dict)
 print(hacerDictRandom(libreria))
-print(playList)
+
 
 def launchVLC (libreria):
     import subprocess
@@ -41,8 +41,7 @@ def launchVLC (libreria):
     for song in playList:
         track = playList[song]
         trackUbic = libreria[track]["location"]
-        rutaVLC += " " + str(trackUbic)
-        print ("ARGUMENTOS", rutaVLC)
+        rutaVLC += " " + str(trackUbic)    
     lanzadorVLC = subprocess.Popen(rutaVLC)
 
 launchVLC(libreria)
