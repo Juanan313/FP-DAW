@@ -100,8 +100,28 @@ Para usar ambos enfasis:
 |-------------------|----------------|
 |\*\*\*Ambos\*\*\*|   ***Ambos***  |
 |\_\_\_Ambos\_\_\_|   ___Ambos___  |
-### Links
+### Tablas
+___
+Como se ve en el apartado anterior en Markdown tambien se pueden realizar tablas utilizandos las barras | y los guiones --:
+~~~
+| **Cabecera tabla**|**Cabecera tabla**|  
+|-------------------|------------------|
+|    *Celda*        |    *Celda*       |
+|    *Celda*        |    *Celda*       |
+|    *Celda*        |    *Celda*       |
+|    *Celda*        |    *Celda*       |
+~~~
+Tabla del ejemplo:
 
+| **Cabecera tabla**|**Cabecera tabla**|  
+|-------------------|------------------|
+|    *Celda*        |    *Celda*       |
+|    *Celda*        |    *Celda*       |
+|    *Celda*        |    *Celda*       |
+|    *Celda*        |    *Celda*       |
+
+### Links
+___
 Se crean escribiendo la palabra o texto enlazada entre [] corchetes el nombre o texto con el que quieres que aparezca el enlace, y el link en cuestión entre () paréntesis.
 ~~~
 [Git Hub Juanan Pujals](https://github.com/Juanan313/)
