@@ -23,7 +23,8 @@ Este fichero contiene los conceptos básicos de Markdown puesto que la práctica
 Encabezados
 Las # almohadillas son uno de los métodos utilizados en Markdown para crear encabezados. Debes usarlos añadiendo uno por cada nivel.
 ~~~
-#Encabezado
+#Encabezado  
+
 *Ejemplo codigo Python:
 ~~~
 ' Print ("Hello world")'
