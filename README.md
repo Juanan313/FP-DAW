@@ -18,9 +18,11 @@ En este repertorio encontraremos ejercicios de *Python* resueltos de la pagina
 Y otros de los videos del curso de *Python* de [Udacity](https://www.udacity.com/course/intro-to-computer-science--cs101).
 
 *Ejemplo codigo Python:
+\~~~
 ' Print ("Hello world")'
-
+\~~~
 *Ejemplo codigo Html:
+\~~~
 '<!DOCTYPE html>
 <html>
     <head>
@@ -29,4 +31,4 @@ Y otros de los videos del curso de *Python* de [Udacity](https://www.udacity.com
         <meta charset = "utf-8">
         <link rel="stylesheet" type="text/css" href="Practica 2.3.3_JuananPujals.css">
         <title>Blog Bandas Legion</title>'
-
+\~~~
