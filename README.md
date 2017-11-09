@@ -84,6 +84,8 @@ ___
 ___
 ### Énfasis (negrita y cursiva)
 Markdown utiliza asteriscos o guiones bajos para enfatizar.
+
+
 | **Markdown**      | __Resultado__  |
 |-------------------|----------------|
 |  \*Cursiva\*      |    *cursiva*   |
