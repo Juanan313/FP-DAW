@@ -17,12 +17,19 @@ En este repertorio encontraremos ejercicios de *Python* resueltos de la pagina
 [Codewars](https://www.codewars.com/dashboard) .
 Y otros de los videos del curso de *Python* de [Udacity](https://www.udacity.com/course/intro-to-computer-science--cs101).
 
+### Práctica 2.2.3 Lenguaje de Marcas: Markdown y Github
+Este fichero contiene los conceptos básicos de Markdown puesto que la práctica 2.2.3 del modulo Lenguaje de marcas consiste en modificar el readme de un repositorio de GitHub con Markdown.
+~~~
+Encabezados
+Las # almohadillas son uno de los métodos utilizados en Markdown para crear encabezados. Debes usarlos añadiendo uno por cada nivel.
+~~~
+#Encabezado
 *Ejemplo codigo Python:
-\~~~
+~~~
 ' Print ("Hello world")'
-\~~~
+~~~
 *Ejemplo codigo Html:
-\~~~
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,4 +38,4 @@ Y otros de los videos del curso de *Python* de [Udacity](https://www.udacity.com
         <meta charset = "utf-8">
         <link rel="stylesheet" type="text/css" href="Practica 2.3.3_JuananPujals.css">
         <title>Blog Bandas Legion</title>
-\~~~
+
