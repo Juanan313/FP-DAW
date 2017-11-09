@@ -92,7 +92,10 @@ Markdown utiliza asteriscos o guiones bajos para enfatizar.
 | \_cursiva\_       |     _cursiva_  |
 | \*\*Negrita\*\*   | **Negrita**    |
 | \_\_Negrita\_\_   | __Negrita__    |
+
 Para usar ambos enfasis:
+
+
 | **Markdown**      | __Resultado__  |
 |-------------------|----------------|
 |\*\*\*Ambos\*\*\*|   ***Ambos***  |
