@@ -3,81 +3,92 @@
 	<title>Lista de reproducción</title>
 	<trackList>
 		<track>
-			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/03%20-%20Que%20borde%20era%20mi%20valle%21%20%5Bwww.Divxatope.com%5D.mp3</location>
-			<title>¡Qué borde era mi valle!</title>
-			<creator>Extremoduro</creator>
-			<album>Para todos los publicos</album>
-			<trackNum>3</trackNum>
-			<annotation>HTRD Hunterd</annotation>
-			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
-			<duration>234321</duration>
+			<location>file:///C:/Users/PC/Music/Vetusta%20Morla%20-%20Maldita%20Dulzura%20%20%20%28Mapas%29.mp3</location>
+			<title>Maldita Dulzura   (Mapas)</title>
+			<creator>Vetusta Morla</creator>
+			<annotation>converted by convert2mp3.net</annotation>
+			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/arturl/fd7865b7fe33ec66dbc95765622d0726/art</image>
+			<duration>228656</duration>
 			<extension application="http://www.videolan.org/vlc/playlist/0">
 				<vlc:id>0</vlc:id>
 			</extension>
 		</track>
 		<track>
-			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/05%20-%20Manue%20IV%20%5Bwww.Divxatope.com%5D.mp3</location>
-			<title>Manué IV</title>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/01.%20Extremoduro%20-%20La%20Ley%20Innata%20-%20Dulce%20Introduccion%20al%20Caos.mp3</location>
+			<title>Dulce Introduccion al Caos</title>
 			<creator>Extremoduro</creator>
-			<album>Para todos los publicos</album>
-			<trackNum>5</trackNum>
-			<annotation>HTRD Hunterd</annotation>
-			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
-			<duration>30592</duration>
+			<album>La Ley Innata</album>
+			<trackNum>1</trackNum>
+			<image>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/Folder.jpg</image>
+			<duration>461595</duration>
 			<extension application="http://www.videolan.org/vlc/playlist/0">
 				<vlc:id>1</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
 			</extension>
 		</track>
 		<track>
-			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/06%20-%20Mama%20%5Bwww.Divxatope.com%5D.mp3</location>
-			<title>Mama</title>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/02.%20Extremoduro%20-%20La%20Ley%20Innata%20-%20Primer%20Movimiento%20El%20Sue%C3%B1o.mp3</location>
+			<title>Primer Movimiento: El Sueño</title>
 			<creator>Extremoduro</creator>
-			<album>Para todos los publicos</album>
-			<trackNum>6</trackNum>
-			<annotation>HTRD Hunterd</annotation>
-			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
-			<duration>370053</duration>
+			<album>La Ley Innata</album>
+			<trackNum>2</trackNum>
+			<image>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/Folder.jpg</image>
+			<duration>363710</duration>
 			<extension application="http://www.videolan.org/vlc/playlist/0">
 				<vlc:id>2</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
 			</extension>
 		</track>
 		<track>
-			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/07%20-%20Mi%20voluntad%20%5Bwww.Divxatope.com%5D.mp3</location>
-			<title>Mi voluntad</title>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/03.%20Extremoduro%20-%20La%20Ley%20Innata%20-%20Segundo%20Movimiento%20Lo%20de%20Fuera.mp3</location>
+			<title>Segundo Movimiento: Lo de Fuera</title>
 			<creator>Extremoduro</creator>
-			<album>Para todos los publicos</album>
-			<trackNum>7</trackNum>
-			<annotation>HTRD Hunterd</annotation>
-			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
-			<duration>200884</duration>
+			<album>La Ley Innata</album>
+			<trackNum>3</trackNum>
+			<image>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/Folder.jpg</image>
+			<duration>703302</duration>
 			<extension application="http://www.videolan.org/vlc/playlist/0">
 				<vlc:id>3</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
 			</extension>
 		</track>
 		<track>
-			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/08%20-%20Pequeno%20rocanrol%20endemico%20%5Bwww.Divxatope.com%5D.mp3</location>
-			<title>Pequeño rocanrol endémico</title>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/04.%20Extremoduro%20-%20La%20Ley%20Innata%20-%20Tercer%20Movimiento%20Lo%20de%20Dentro.mp3</location>
+			<title>Tercer Movimiento: Lo de Dentro</title>
 			<creator>Extremoduro</creator>
-			<album>Para todos los publicos</album>
-			<trackNum>8</trackNum>
-			<annotation>HTRD Hunterd</annotation>
-			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
-			<duration>308221</duration>
+			<album>La Ley Innata</album>
+			<trackNum>4</trackNum>
+			<image>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/Folder.jpg</image>
+			<duration>456968</duration>
 			<extension application="http://www.videolan.org/vlc/playlist/0">
 				<vlc:id>4</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
 			</extension>
 		</track>
 		<track>
-			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/09%20-%20El%20camino%20de%20las%20utopias%20%5Bwww.Divxatope.com%5D.mp3</location>
-			<title>El camino de las utopías</title>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/05.%20Extremoduro%20-%20La%20Ley%20Innata%20-%20Cuarto%20Movimiento%20La%20Realidad.mp3</location>
+			<title>Cuarto Movimiento: La Realidad</title>
 			<creator>Extremoduro</creator>
-			<album>Para todos los publicos</album>
-			<trackNum>9</trackNum>
-			<annotation>HTRD Hunterd</annotation>
-			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
-			<duration>450693</duration>
+			<album>La Ley Innata</album>
+			<trackNum>5</trackNum>
+			<image>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/Folder.jpg</image>
+			<duration>347802</duration>
 			<extension application="http://www.videolan.org/vlc/playlist/0">
 				<vlc:id>5</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/06.%20Extremoduro%20-%20La%20Ley%20Innata%20-%20Coda%20Flamenca%20%28Otra%20Realidad%29.mp3</location>
+			<title>Coda Flamenca (Otra Realidad)</title>
+			<creator>Extremoduro</creator>
+			<album>La Ley Innata</album>
+			<trackNum>6</trackNum>
+			<image>file:///C:/Users/PC/Music/Extremoduro%20-%20La%20Ley%20Innata/Folder.jpg</image>
+			<duration>373950</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>6</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
 			</extension>
 		</track>
 		<track>
@@ -90,7 +101,8 @@
 			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
 			<duration>494919</duration>
 			<extension application="http://www.videolan.org/vlc/playlist/0">
-				<vlc:id>6</vlc:id>
+				<vlc:id>7</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
 			</extension>
 		</track>
 		<track>
@@ -103,11 +115,12 @@
 			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
 			<duration>247121</duration>
 			<extension application="http://www.videolan.org/vlc/playlist/0">
-				<vlc:id>7</vlc:id>
+				<vlc:id>8</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
 			</extension>
 		</track>
 		<track>
-			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/03%20-%20Que%20borde%20era%20mi%20valle!%20%5Bwww.Divxatope.com%5D.mp3</location>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/03%20-%20Que%20borde%20era%20mi%20valle%21%20%5Bwww.Divxatope.com%5D.mp3</location>
 			<title>¡Qué borde era mi valle!</title>
 			<creator>Extremoduro</creator>
 			<album>Para todos los publicos</album>
@@ -116,7 +129,8 @@
 			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
 			<duration>234321</duration>
 			<extension application="http://www.videolan.org/vlc/playlist/0">
-				<vlc:id>8</vlc:id>
+				<vlc:id>9</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
 			</extension>
 		</track>
 		<track>
@@ -129,7 +143,78 @@
 			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
 			<duration>344323</duration>
 			<extension application="http://www.videolan.org/vlc/playlist/0">
-				<vlc:id>9</vlc:id>
+				<vlc:id>10</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/05%20-%20Manue%20IV%20%5Bwww.Divxatope.com%5D.mp3</location>
+			<title>Manué IV</title>
+			<creator>Extremoduro</creator>
+			<album>Para todos los publicos</album>
+			<trackNum>5</trackNum>
+			<annotation>HTRD Hunterd</annotation>
+			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
+			<duration>30592</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>11</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/06%20-%20Mama%20%5Bwww.Divxatope.com%5D.mp3</location>
+			<title>Mama</title>
+			<creator>Extremoduro</creator>
+			<album>Para todos los publicos</album>
+			<trackNum>6</trackNum>
+			<annotation>HTRD Hunterd</annotation>
+			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
+			<duration>370053</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>12</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/07%20-%20Mi%20voluntad%20%5Bwww.Divxatope.com%5D.mp3</location>
+			<title>Mi voluntad</title>
+			<creator>Extremoduro</creator>
+			<album>Para todos los publicos</album>
+			<trackNum>7</trackNum>
+			<annotation>HTRD Hunterd</annotation>
+			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
+			<duration>200884</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>13</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/08%20-%20Pequeno%20rocanrol%20endemico%20%5Bwww.Divxatope.com%5D.mp3</location>
+			<title>Pequeño rocanrol endémico</title>
+			<creator>Extremoduro</creator>
+			<album>Para todos los publicos</album>
+			<trackNum>8</trackNum>
+			<annotation>HTRD Hunterd</annotation>
+			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
+			<duration>308221</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>14</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/PC/Music/Extremoduro%20-%20Para%20Todos%20Los%20Publicos%20%5BRock%5D%5B1%20Cds%5D%5B2013%5D/09%20-%20El%20camino%20de%20las%20utopias%20%5Bwww.Divxatope.com%5D.mp3</location>
+			<title>El camino de las utopías</title>
+			<creator>Extremoduro</creator>
+			<album>Para todos los publicos</album>
+			<trackNum>9</trackNum>
+			<annotation>HTRD Hunterd</annotation>
+			<image>file:///C:/Users/PC/AppData/Roaming/vlc/art/artistalbum/Extremoduro/Para%20todos%20los%20publicos/art.jpg</image>
+			<duration>450693</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>15</vlc:id>
+				<vlc:option>file-caching=300</vlc:option>
 			</extension>
 		</track>
 	</trackList>
@@ -144,5 +229,11 @@
 			<vlc:item tid="7"/>
 			<vlc:item tid="8"/>
 			<vlc:item tid="9"/>
+			<vlc:item tid="10"/>
+			<vlc:item tid="11"/>
+			<vlc:item tid="12"/>
+			<vlc:item tid="13"/>
+			<vlc:item tid="14"/>
+			<vlc:item tid="15"/>
 	</extension>
 </playlist>
