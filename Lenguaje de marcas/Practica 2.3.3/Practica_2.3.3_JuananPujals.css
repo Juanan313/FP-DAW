@@ -1,0 +1,89 @@
+body{
+  background-color: hsl(120, 38%, 10%);
+  font-family: Arial;
+  font-weight: normal;
+  font-size:15px;
+  color: #fff;
+}
+
+header{
+  position: fixed;
+  width: 98%;
+  top:0;
+  left:0;
+  background-color: hsl(60, 12%, 10%);
+  color: #ffffff;
+  padding: 6px;
+  margin: 10px;
+  margin-top:0px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;;
+}
+
+h1{
+  display: block;
+  margin: 5px;
+}
+
+h2,h3{
+  background-color: hsl(235, 22%, 24%);
+  color: hsl(0, 0%, 100%);
+  margin: 15px;
+  margin-bottom:2px;
+  padding: 3px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;;
+}
+
+h3{
+    background-color: hsl(122, 59%, 42%);
+    margin:0;
+    padding: 6px;
+}
+
+p{
+  border:1px solid black;
+  padding: 5px;
+}
+
+main{
+  margin-top: 77px;
+  margin-left: 2px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;;
+}
+
+section{
+  margin: 10px;
+  border: 1px solid #6B6B6E;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;;
+}
+
+article{
+  background-color: hsl(81, 84%, 73%);
+  color: rgb(57, 57, 57);
+  margin: 15px;
+  margin-top:4px;
+  padding: 14px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;;
+}
+img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+IMG.imgcenter{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border:none;
+  } 
+  
