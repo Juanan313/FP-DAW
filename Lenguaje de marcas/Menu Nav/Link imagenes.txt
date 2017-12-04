@@ -1,0 +1,19 @@
+WOW: https://eu.battle.net/forums/static/images/game-logos/game-logo-wow.png
+
+Fondo Foro WOW: https://eu.battle.net/forums/static/images/backgrounds/background-wow-top.jpg
+
+WOW icon: https://eu.battle.net/forums/static/images/logos/logo-small-wow.png
+
+Iconos foro wow:
+
+blue: https://eu.battle.net/forums/static/images/icons/icon-sprites-16-blue-light.png
+
+white: https://eu.battle.net/forums/static/images/icons/icon-sprites-16-white.png
+
+https://eu.battle.net/forums/static/images/icons/icon-sprites-32-white.png
+
+yellow: https://eu.battle.net/forums/static/images/icons/icon-sprites-16-wow-gold.png
+
+https://eu.battle.net/forums/static/images/icons/icon-sprites-24-wow-gold.png
+
+

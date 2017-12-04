@@ -1,0 +1,213 @@
+body{
+    background: #090806 url(https://eu.battle.net/forums/static/images/backgrounds/background-wow-top.jpg) repeat-y top center;
+    font-family: Arial;
+    font-weight: normal;
+    font-size:15px;
+    color: #fff;
+  }
+  
+  header{
+    position: fixed;
+    width: 98%;
+    top:0;
+    left:0;
+    background-color: hsla(60, 12%, 10%, 0.63);
+    color: #ffffff;
+    padding: 6px;
+    margin: 10px;
+    margin-top:0px;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;;
+  }
+  
+  h1{
+    display: block;
+    margin: 0px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.1em 0.1em rgba(145, 134, 13, 0.507);
+    font-family: "Friz Quadrata Std Medium";
+    font-weight: normal;
+    font-size:35px;
+    font-style: bold;
+    letter-spacing: 3px ;
+    text-transform: capitalize;;  
+  }
+  
+  h2{
+    background-color: hsla(235, 9%, 50%, 0.644);
+    color: hsl(0, 0%, 100%);
+    margin: 15px;
+    margin-bottom:2px;
+    padding: 3px;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;;
+  }
+  
+  h3{
+      border: 3px;
+      color: rgb(0, 0, 0);
+      border-radius: 3px;
+      width: auto;
+      height: auto;
+      margin:0;
+      padding: 6px;
+  }
+  
+  main{
+    margin-top: 100px;
+    margin-left: 2px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;;
+  }
+  
+  section{
+    margin: 20px;
+    background: #5b53c962 ;
+    border: 1px solid #6B6B6E;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+  }
+  
+  article{
+    background-color: hsla(251, 55%, 67%, 0.719);
+    color: rgb(255, 255, 255);
+    margin: 15px;
+    margin-top:8px;
+    padding: 14px;
+    border-radius: 8px;
+    width: 40%;
+    height: auto;;
+  }
+  img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+  IMG.imgcenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:none;
+    }
+  
+  
+  iframe {
+    display: block;
+    margin: 0 auto;
+    border-color: rgb(0, 0, 0);
+    border: 5px;
+    border-radius: 5px;
+  }
+  
+  nav {
+  position: relative;
+  }
+  
+  #bg-dh_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -48px -10px;
+  }
+  
+  
+  #bg-dk_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png');
+    background-position:  -10px -86px;
+  }
+  
+  
+  #bg-druid_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -10px -48px;
+  }
+  
+  
+  #bg-hunter_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -48px -48px;
+  }
+  
+  
+  #bg-mage_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -86px -10px;
+  }
+  
+  
+  #bg-monk_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -86px -48px;
+  }
+  
+  
+  #bg-paladin_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -10px -10px;
+  }
+  
+  
+  #bg-priest_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -48px -86px;
+  }
+  
+  
+  #bg-rogue_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -86px -86px;
+  }
+  
+  
+  #bg-shaman_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -124px -10px;
+  }
+  
+  
+  #bg-warlock_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -124px -48px;
+  }
+  
+  
+  #bg-warrior_icon {
+    width: 18px; height: 18px;
+    background: url('css_sprites.png') -124px -86px;
+  }
+  
+  ul.menunav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: url(https://i.imgur.com/xZcjIl9.jpg?fb) repeat-x center ;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li.menunav {
+    float: left;
+  }
+  
+  li a.menunav {
+    display: block;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background: url(http://static.allbackgrounds.com/bg/pain.jpg) ;
+    opacity: 0.85; 
+  }
+
+  article.alignR,section.alignR,h2.alignR,h3.alignR,p.alignR {
+    text-align: right;
+    margin-left: 57%;
+  }

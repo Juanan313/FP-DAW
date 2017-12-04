@@ -1,0 +1,222 @@
+if (typeof $chakratt == "undefined") {
+    var $chakratt = new function() {
+        var m = false;
+        var l = 'load';
+        
+        function hi() {
+            var hh = document.getElementsByTagName("head")[0];
+            var ss = document.createElement('link');
+            ss.type = 'text/css';
+            ss.rel = 'stylesheet';
+            ss.href = 'http://base.wowchakra.com/css/wowchakratools.css';
+            hh.appendChild(ss);
+        }
+        
+        function ie() {
+            var v = document.getElementsByTagName('A');
+            
+            for ( var f = 0; f < v.length; f++) {
+                al(v[f]);
+            }
+            
+            hi();
+        }        
+        
+
+        function mo(v) {
+            addEvent (v, 'mouseover', ct, m);
+        }
+        
+
+        function mu(v) {
+            addEvent (v, 'mouseout', ot, m);
+        }
+        
+        function mm(v) {
+            addEvent (v, 'mousemove', at, m);
+        }
+        
+        function al(v) {
+            mo(v);
+            mu(v);
+            mm(v);            
+        }
+        
+        function ct(e) {
+            var ht;
+            
+            if (!e) e = window.event;
+            
+            if (e.target) ht = e.target;
+            else if (e.srcElement) ht = e.srcElement;            
+            
+            var hr = ht.getAttribute('href');
+            
+            if (!hr) return;
+            
+            var an = hr.match(/^http:\/\/base\.wowchakra\.com\/\??(hechizo|objeto|logro|mision)=([0-9]+)/);
+            
+            if (!an) return;
+            
+            var tp = an[1];
+            var id = an[2];
+            
+            if (an != null) {
+                var dd = document.getElementById(tp + id);
+                
+                if (!dd || dd.getAttribute('rel') == 'cargando') rst(tp, id);
+            }                        
+        }
+        
+        function at(e) {
+            var ht;
+            
+            if (!e) e = window.event;
+            
+            if (e.target) ht = e.target;
+            else if (e.srcElement) ht = e.srcElement;
+            
+            var hr = ht.getAttribute('href');
+            
+            if (!hr) return;
+            
+            var an = hr.match(/^http:\/\/base\.wowchakra\.com\/\??(hechizo|objeto|logro|mision)=([0-9]+)/);
+            
+            if (an != null) {
+                var d = document.getElementById(an[1]+an[2]);
+        
+                if (d) {
+                    if (document.documentElement.scrollTop > 0) d.style.top = (e.clientY + document.documentElement.scrollTop + 15) + "px";
+                    else d.style.top = (e.clientY + document.body.scrollTop + 15) + "px";
+
+                    if (document.documentElement.scrollLeft > 0) d.style.left = (e.clientX + document.documentElement.scrollLeft + 15) + "px";
+                    else d.style.left = (e.clientX + document.body.scrollLeft + 15) + "px";
+                    
+                    d.style.visibility = "visible";
+                }                
+            }
+        }
+        
+        function ot(e) {
+            var ht;
+        
+            if (!e) e = window.event;
+        
+            if (e.target) ht = e.target;        
+            else if (e.srcElement) ht = e.srcElement;
+        
+            var hr = ht.getAttribute('href');
+    
+            if (!hr) return;
+        
+            var an = hr.match(/^http:\/\/base\.wowchakra\.com\/\??(hechizo|objeto|logro|mision)=([0-9]+)/);
+    
+            if (!an) return;
+    
+            var d = document.getElementById(an[1]+an[2]);
+    
+            if (!d) return;
+    
+            d.style.visibility = "hidden";            
+        }
+        
+        var cn; 
+        var ti;
+        var it;
+
+        function rst(tp, id) {
+            ti = tp;
+            it = id;
+            cn = cx(); 
+            cn.onreadystatechange = pe; 
+            cn.open('GET','http://www.wowchakra.com/base/index.php?' + tp + '=' + id + '&tt', true);
+            cn.send(null);
+        }
+        
+        function pe() {            
+            var d = document.getElementById(ti + it);
+            
+            if (!d) {
+                var el = document.createElement('div');
+                el.setAttribute('id', ti + it);
+                el.style.position = 'absolute';
+                el.style.left = "125px";
+                el.style.top = "125px";
+                
+                var v = document.getElementsByTagName('body');
+                v[0].appendChild(el);
+            }
+            
+            var rr;
+            
+            if (cn.readyState == 4) {
+                if (!cn.responseText) return;
+                
+                var bd = eval('(' + cn.responseText + ')');
+                var s;
+                
+                s = tt(bd);
+                
+                rr = document.getElementById(ti + it);
+                
+                if (rr.getAttribute('rel') == 'cargando') rr.removeAttribute('rel');
+                
+                rr.innerHTML = s;                            
+            } else {
+                rr = document.getElementById(ti + it);
+                rr.setAttribute('rel', 'cargando');
+                rr.innerHTML = 'Cargando...';
+            }
+        }
+        
+        function tt(dd) {
+            var ex;
+            if (ti == 'mision') {
+                ex = '<div class=\"wowtooltip\">' + dd.tt + "</div>";
+            } else {
+                ex = '<div class=\"wowtooltip\"><span class="icono icono-peq" style="background-image: url(\'http://media.pypgamers.com/wowchakra/interface/icons/64/' + dd.icono + '.png\');"></span>';
+                ex = ex + "<span class=\"" + ti;
+                if (ti == 'objeto') ex = ex + " qc" + dd.calidad;
+                ex = ex + "\">" + dd.nombre + "</span>";
+                ex = ex + dd.tt + "</div>";                
+            }
+            
+            return ex;
+        }
+
+        function addEvent(el,ne,fu,ca) {
+            if (el.attachEvent) {
+                el.attachEvent('on' + ne, fu);
+                return true;
+            }
+            else  
+            if (el.addEventListener) {
+                el.addEventListener(ne, fu, ca);
+                return true;
+            } else
+                return false;
+        }
+        
+        function cx() {
+            var xm = null;
+            if (window.ActiveXObject)
+                xm = new ActiveXObject("Microsoft.XMLHTTP");
+            else if (window.XMLHttpRequest) 
+                xm = new XMLHttpRequest();
+            return xm;
+        }        
+        
+        this.init = function() {
+            xy();
+        }
+        
+        function xy() {
+            addEvent(window,l,ie,false);
+
+        }
+    }            
+};
+
+if ($chakratt) {
+    $chakratt.init();
+}

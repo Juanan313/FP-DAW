@@ -1,0 +1,175 @@
+body{
+  background: #090806 url(http://www.vanseodesign.com/blog/wp-content/uploads/2011/10/background-3.jpg) repeat-y top center;
+  font-family: Arial;
+  font-weight: normal;
+  font-size:15px;
+  color: #fff;;
+}
+header{
+  position: fixed;
+  width: 98%;
+  top:0;
+  left:0;
+  background-color: hsla(60, 12%, 10%, 0.63);
+  color: #ffffff;
+  padding: 6px;
+  margin: 10px;
+  margin-top:0px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;;
+}
+
+h1{
+  display: block;
+  margin: 5px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0.1em 0.1em rgba(145, 134, 13, 0.596);
+  font-family: "Friz Quadrata Std Medium";
+  font-weight: normal;
+  font-size:35px;
+  font-style: bold;
+  letter-spacing: 3px ;
+  text-transform: capitalize;;  
+}
+
+
+h2,h3{
+  background-color: hsl(235, 22%, 24%);
+  color: hsl(0, 0%, 100%);
+  margin: 15px;
+  margin-bottom:2px;
+  padding: 3px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;;
+}
+
+h3{
+    background-color: hsl(122, 59%, 42%);
+    margin:0;
+    padding: 6px;
+}
+
+main{
+  margin-top: 100px;
+  background: #090806 url(http://media.pypgamers.com/playhs/web/imagenFondoPrincipalY_3.jpg) repeat;
+  margin-left: 2px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+section{
+  margin: 10px;
+  border: 1px solid #6B6B6E;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: flex;;
+}
+
+article{
+  background-color: hsla(79, 83%, 73%, 0.473);
+  color: rgb(57, 57, 57);
+  margin: 15px;
+  margin-top:4px;
+  padding: 14px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: flex;;
+}
+img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+img.logo{
+  height: 90px;
+  width: 90px;;
+}
+img.imgcenter{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border:none;
+  } 
+  p{
+    float: left ;
+    width: 500px ;
+    height: 500px;
+    overflow-y: auto;
+    margin: 30PX;
+    padding: 10px ;
+    background: hsla(79, 83%, 73%, 0.473);
+    font-size: 20px ;
+    font-family: "Friz Quadrata Std Medium";
+    color: rgb(0, 0, 0);
+    line-height: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    
+  }
+  iframe{
+    border: 3px;
+    border-color: rgba(153, 143, 0, 0.863);
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+}
+  /*p::first-letter { 
+    font-size: 200%;
+    color: rgb(27, 59, 1);
+  }*/
+  .capitalLetter
+  {
+     float:left;
+     color:black;
+     font-size:45px;
+     line-height:35px;
+     padding:2px;
+     font-family:"Algerian";
+     margin-right: 5px;
+  }
+  .titleinP
+  {
+    font-size:170%;
+    color: rgb(51, 29, 146);
+    font-family: "Friz Quadrata Std Medium";
+    padding: 2px;
+    font-style: bold;
+    text-align: center;
+
+  }
+
+  ul.menunav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: url(https://i.imgur.com/xZcjIl9.jpg?fb) repeat-x center ;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li.menunav {
+    float: left;
+  }
+  
+  li a.menunav {
+    display: block;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background: url(http://static.allbackgrounds.com/bg/pain.jpg) ;
+    opacity: 0.85; 
+  }
