@@ -1,3 +1,10 @@
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body{
   background: #090806 url(http://media.pypgamers.com/playhs/web/imagenFondoPrincipalY_3.jpg) repeat-y top center;
   font-family: Arial;

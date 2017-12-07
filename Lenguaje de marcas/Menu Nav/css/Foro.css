@@ -1,3 +1,10 @@
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body{
     background: #090806 url(https://eu.battle.net/forums/static/images/backgrounds/background-wow-top.jpg) repeat-y top center;
     font-family: Arial;
@@ -57,7 +64,8 @@ body{
   
   main{
     margin-top: 100px;
-    margin-left: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: 3px solid rgb(0, 0, 0);
     border-radius: 8px;
     max-width: 100%;
@@ -76,8 +84,10 @@ body{
   article{
     background-color: hsla(251, 55%, 67%, 0.719);
     color: rgb(255, 255, 255);
-    margin: 15px;
+    margin-left: 35px;
     margin-top:8px;
+    margin-right: 10px;
+    margin-bottom: 8px;
     padding: 14px;
     border-radius: 8px;
     width: 40%;

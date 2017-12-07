@@ -1,3 +1,11 @@
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body{
   background: #090806 url(http://www.vanseodesign.com/blog/wp-content/uploads/2011/10/background-3.jpg) repeat-y top center;
   font-family: Arial;
@@ -74,7 +82,7 @@ section{
 article{
   background-color: hsla(79, 83%, 73%, 0.473);
   color: rgb(57, 57, 57);
-  margin: 15px;
+  margin: 20px;
   margin-top:4px;
   padding: 14px;
   border-radius: 8px;
@@ -103,7 +111,10 @@ img.imgcenter{
     width: 500px ;
     height: 500px;
     overflow-y: auto;
-    margin: 30PX;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right 20px;
     padding: 10px ;
     background: hsla(79, 83%, 73%, 0.473);
     font-size: 20px ;
