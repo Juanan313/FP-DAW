@@ -18,7 +18,6 @@ header{
   width: 98%;
   top:0;
   left:0;
-  background-color: hsla(60, 12%, 10%, 0.63);
   color: #ffffff;
   padding: 6px;
   margin: 10px;
@@ -53,7 +52,6 @@ h2,h3{
 }
 
 h3{
-    background-color: hsl(122, 59%, 42%);
     margin:0;
     padding: 6px;
 }
@@ -80,6 +78,11 @@ section{
   max-width: 100%;
   height: auto;;
 }
+.clases{
+  float: left;
+  margin: 25px;
+  margin-left: 
+}
 
 article{
   background-color: hsla(79, 83%, 73%, 0.473);
@@ -95,6 +98,7 @@ img {
   border-radius: 8px;
   max-width: 100%;
   height: auto;
+  margin: 10px;
 }
 IMG.imgcenter{
   display: block;
@@ -116,76 +120,64 @@ nav {
 position: relative;
 }
 
-#bg-dh_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -48px -10px;
+.bg-Shaman {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -1120px -750px;
 }
 
-
-#bg-dk_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png');
-  background-position:  -10px -86px;
+.bg-Warlock {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -1120px -380px;
 }
 
-
-#bg-druid_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -10px -48px;
+.bg-Warrior {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -1120px -10px;
 }
 
-
-#bg-hunter_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -48px -48px;
+.bg-Monk {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -750px -750px;
 }
 
-
-#bg-mage_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -86px -10px;
+.bg-Paladin {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -380px -750px;
 }
 
-
-#bg-monk_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -86px -48px;
+.bg-Rogue {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -10px -10px;
 }
 
-
-#bg-paladin_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -10px -10px;
+.bg-Mage {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -750px -380px;
 }
 
-
-#bg-priest_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -48px -86px;
+.bg-Hunter {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -750px -10px;
 }
 
-
-#bg-rogue_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -86px -86px;
+.bg-Druid {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -380px -380px;
 }
 
-
-#bg-shaman_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -124px -10px;
+.bg-Priest {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -10px -380px;
 }
 
-
-#bg-warlock_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -124px -48px;
+.bg-DK {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -10px -750px;
 }
 
-
-#bg-warrior_icon {
-  width: 18px; height: 18px;
-  background: url('css_sprites.png') -124px -86px;
+.bg-DH {
+  width: 350px; height: 350px;
+  background: url(https://ibb.co/gcvxfG) -380px -10px;
 }
 
 ul.menunav{
