@@ -92,7 +92,8 @@ article{
   padding: 14px;
   border-radius: 8px;
   max-width: 100%;
-  height: auto;;
+  height: auto;
+  
 }
 img {
   border-radius: 8px;
@@ -120,64 +121,79 @@ nav {
 position: relative;
 }
 
+}
 .bg-Shaman {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -1120px -750px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png);
+  background-position: -1120px -750px;
+  border: none;
 }
 
 .bg-Warlock {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -1120px -380px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -1120px -380px;
+  border: none!important;
+  display: block;
 }
 
 .bg-Warrior {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -1120px -10px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -1120px -10px;
+  border: none;
 }
 
 .bg-Monk {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -750px -750px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -750px -750px;
+  border: none;
 }
 
 .bg-Paladin {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -380px -750px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -380px -750px;
+  border: none;
 }
 
 .bg-Rogue {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -10px -10px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -10px -10px;
+  border: none;
 }
 
 .bg-Mage {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -750px -380px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -750px -380px;
+  border: none;
 }
 
 .bg-Hunter {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -750px -10px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -750px -10px;
+  border: none;
 }
 
 .bg-Druid {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -380px -380px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -380px -380px;
+  border: none;
 }
 
 .bg-Priest {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -10px -380px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -10px -380px;
+  border: none;
 }
 
 .bg-DK {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -10px -750px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -10px -750px;
+  border: none;
 }
 
 .bg-DH {
   width: 350px; height: 350px;
-  background: url(https://ibb.co/gcvxfG) -380px -10px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -380px -10px;
+  border: none;
 }
 
 ul.menunav{
@@ -239,5 +255,8 @@ li a:hover {
 	.social ul li a:hover {
     opacity: 75%;
 		padding: 10px 30px; 
-	}
-
+  }
+  
+  .floating{
+    display: flex;
+  }
