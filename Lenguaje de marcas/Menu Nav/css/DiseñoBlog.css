@@ -124,16 +124,14 @@ position: relative;
 }
 .bg-Shaman {
   width: 350px; height: 350px;
-  background: url(https://image.ibb.co/cP1sEb/css_sprites.png);
-  background-position: -1120px -750px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png)-1120px -380px;
   border: none;
 }
 
 .bg-Warlock {
   width: 350px; height: 350px;
   background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -1120px -380px;
-  border: none!important;
-  display: block;
+  border: none;
 }
 
 .bg-Warrior {
