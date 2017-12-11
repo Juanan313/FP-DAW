@@ -13,8 +13,26 @@
             alert("juas picaste!!");
         }
         function myFunction() {
+    // Para mostrar solo el valor por ventana alerta
     var x = document.getElementById("mySelect").selectedIndex;
     alert(document.getElementsByTagName("option")[x].value);
+    
+    // Mostrar valor y texto por ventana
+    var x = document.getElementById("mySelect").selectedIndex;
+    var y = document.getElementById("mySelect").options;
+    alert(y[x].text+ " "+y[x].value);
+    // Mostrar valor y texto mediante var combo
+    var combo = document.getElementById("mySelect");
+    window.alert(combo.options[combo.selectedIndex].text+" "+combo.options[combo.selectedIndex].value +" este ha sido mostrado mediante combo");
+        }
+        var options = []
+        function mostrarConsola() {
+            var x = document.getElementById("mySelect").selectedIndex;
+            var y = document.getElementById("mySelect").options;
+            console.log(y[x].text +" "+y[x].value);
+            for (i = 0; i < y.length; i++) {
+    console.log(y[i].text +" "+y[i].value);
+}
         }
     </script>
 </head>
@@ -35,5 +53,8 @@
       </select>
 
       <button type="button" onclick="myFunction()">Try it</button>
+      <button type="button" onclick="mostrarConsola()">Prueba en consola</button>
+
+      
 </body>
 </html>
