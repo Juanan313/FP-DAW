@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio JavaScript</title>
+    <script>
+        function alerta() {
+            alert("paged loaded");
+        }
+        function alerta2() {
+            alert("juas picaste!!");
+        }
+        function myFunction() {
+    var x = document.getElementById("mySelect").selectedIndex;
+    alert(document.getElementsByTagName("option")[x].value);
+        }
+    </script>
+</head>
+<body onload="alerta()">
+    <h2>My First JavaScript</h2>
+    
+    <button type="button"
+    onclick="alerta2()">
+    Click me pls</button>
+    <br/><br/><br/><br/>
+    <select id="mySelect" onchange="myFunction()">
+        <option value="Demon Hunter">Devastacion</option>
+        <option value="Death Knight">Frost</option>
+        <option value="Paladin">Retribution</option>
+        <option value="Mage">Arcane</option>
+        <option value="Druid">Resto</option>
+        <option value="Huntard">Survival</option>
+      </select>
+
+      <button type="button" onclick="myFunction()">Try it</button>
+</body>
+</html>
