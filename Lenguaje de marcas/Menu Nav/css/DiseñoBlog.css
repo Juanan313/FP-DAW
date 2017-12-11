@@ -121,10 +121,10 @@ nav {
 position: relative;
 }
 
-}
+
 .bg-Shaman {
   width: 350px; height: 350px;
-  background: url(https://image.ibb.co/cP1sEb/css_sprites.png)-1120px -380px;
+  background: url(https://image.ibb.co/cP1sEb/css_sprites.png) -1120px -750px;
   border: none;
 }
 
