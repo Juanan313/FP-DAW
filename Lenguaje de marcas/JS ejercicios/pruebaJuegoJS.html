@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+  <head>
+		<title>Juego</title>
+		<!------------JUEGO------------>
+		<script type="text/javascript">
+			x= 10; //Left
+			y= 10; //Top
+			function Mover(direccion)
+			{
+				switch (direccion.keyCode)
+				{
+					//Arriba
+					case 38:
+						y+= 5;
+						document.getElementById("imagen").style.top= String(y) + "px";
+					break;
+				}
+			}
+		</script>
+  </head>
+	<body onkeyup="Mover(event);">
+		<img src="https://camo.githubusercontent.com/a14015318f11109e8c8243b56c6cd2c71830050f/687474703a2f2f69302e6b796d2d63646e2e636f6d2f70686f746f732f696d616765732f6e657773666565642f3030302f3838302f3030352f6536312e6a7067" id="imagen" style="position: relative;" alt=""/>
+	</body>
+</html>

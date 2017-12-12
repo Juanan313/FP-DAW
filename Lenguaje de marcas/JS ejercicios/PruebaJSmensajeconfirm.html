@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        color: white;
+        background-color: black;
+    }
+    .button{
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer; 
+    }
+    div{
+        background-color:rgb(207, 129, 40);
+        width: 300px;
+        height: 50px;
+        align-self: center;
+        font-size: 25px;
+    }
+        </style>
+    <script>
+        function alerta()
+            {
+            var mensaje;
+            var opcion = confirm("Modificar Div?");
+            if (opcion == true) {
+                modifDiv();
+        	} else {
+        	    alert("has cancelado");
+        	}
+}
+    x= 50
+    y=50
+        function modifDiv() {
+            document.getElementById("change").innerHTML= "La prueba funciona";
+            document.getElementById("change").style.backgroundColor = "green";
+            document.getElementById("change").style.height = String(x+y) +"px";
+        }
+</script>
+</head>
+<body>
+    <h1>Prueba mensaje de confirmación</h1>
+    <p id="ejemplo">En este párrafo se mostrará la opción clickada por el usuario</p>
+    <br/><br/>
+    <div id="change"> Pruebas</div>
+    <button class="button" type="button" onclick="alerta()">Cambia div</button>
+</body>
+</html>
