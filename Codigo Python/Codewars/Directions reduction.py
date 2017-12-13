@@ -2,6 +2,8 @@
 # https://www.codewars.com/kata/550f22f4d758534c1100025a/train/python
 # 5 kyu
 # Write a function dirReduc which will take an array of strings and returns an array of strings with the needless directions removed (W<->E or S<->N side by side).
+
+
 def dirReduc(camino):
     opuestos = {"NORTH":"SOUTH","SOUTH":"NORTH","EAST":"WEST","WEST":"EAST"}
     path = []
@@ -16,6 +18,6 @@ def dirReduc(camino):
     return path
 
 a = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]
-print(dirReduc(a), ['WEST'])
+assert dirReduc(a) == ['WEST'] , "No coincide"
 u=["NORTH", "WEST", "SOUTH", "EAST"]
-print(dirReduc(u), ["NORTH", "WEST", "SOUTH", "EAST"])
+assert dirReduc(u) == ["NORTH", "WEST", "SOUTH", "EAST"] ,"No coincide"
