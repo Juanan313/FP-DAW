@@ -1,5 +1,8 @@
-body{
-    /*background: #090806 url(http://glum.me/uploads/html-web-page-background-color-codes-new-throughout.jpg) repeat-y top center;*/
+/*body{
+    background: #090806 url(http://glum.me/uploads/html-web-page-background-color-codes-new-throughout.jpg) repeat-y top center;
+}*/
+*{
+    color:black;
 }
 #Horario {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -13,7 +16,8 @@ body{
     border-radius: 5px;
 }
 
-#Horario tr:nth-child(even){background-color: #f2f2f2;}
+#Horario tr:nth-child(even){background-color: #cccccc;}
+#Horario tr:nth-child(odd){background-color: #bfff86;}
 
 #Horario tr:hover {background-color: #ddd;}
 
