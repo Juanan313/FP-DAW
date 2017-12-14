@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 body{
-    background: #090806 url(https://eu.battle.net/forums/static/images/backgrounds/background-wow-top.jpg) repeat-y top center;
+    background: #090806 url(https://eu.battle.net/forums/static/images/backgrounds/background-wow-top.jpg) no-repeat center;
+    background-attachment: fixed;
     font-family: Arial;
     font-weight: normal;
     font-size:15px;
@@ -18,7 +19,6 @@ body{
     width: 98%;
     top:0;
     left:0;
-    background-color: hsla(60, 12%, 10%, 0.63);
     color: #ffffff;
     padding: 6px;
     margin: 10px;
