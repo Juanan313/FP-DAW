@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css y js/HorarioClase.css">
-    <script type='text/javascript' src='HorarioClase.js'></script>
-    <title>Document</title>
+    <script type='text/javascript' src='css y js/HorarioClase.js'></script>
+    <title>Horario Clase 1ºDAW 2017/2018</title>
 </head>
 <body>
     <h1>Horario Clases FP-DAW dual 2017/2018</h1>
-    <table id="Horario" onclick="modifDiv()">
+    <table id="Horario" onclick="cambiarEstilo()">
         <tr>
-            <th scope="row">Día</th>
+            <th scope="row">Horas</th>
             <th>Lunes</th>
             <th>Martes</th>
             <th>Miércoles</th>
@@ -22,31 +22,82 @@
             
         <tr>   
             <th>15:45-16:40</th>    
-            <td id="change">BBDD</td>    
-            <td id="change">SI</td>    
-            <td id="change">SI</td>
-            <td id="change">Programación</td>
-            <td id="change">BBDD</td>    
+            <td <id="BD" onclick="cambiarEstilo(this)" class="BD">BBDD
+                <p></p>
+            </td>    
+            <td <id="SI" onclick="cambiarEstilo(this)" class="SI">SI
+                <p></p>
+            </td>    
+            <td <id="SI" onclick="cambiarEstilo(this)" class="SI">SI
+                <p></p>
+            </td>
+            <td <id="Prog" onclick="cambiarEstilo(this)" class="Prog">Programación
+                <p></p>
+            </td>
+            <td <id="BD" onclick="cambiarEstilo(this)" class="BD">BBDD
+                <p></p>
+            </td>    
         </tr>
             
         <tr>   
-            <th>16:40-17:35</th>    
-            <td id="change">LLMM</td>    
-            <td id="change">ED</td>    
-            <td id="change">FOL</td>
-            <td id="change">Programación</td>
-            <td id="change">BBDD</td>    
+            <th>16:40-17:35</th>
+            <td <id="LM" onclick="cambiarEstilo(this)" class="LM">LLMM
+                <p></p>
+            </td>    
+            <td <id="ED" onclick="cambiarEstilo(this)" class="ED">ED
+                <p></p>
+            </td>    
+            <td <id="FOL" onclick="cambiarEstilo(this)" class="FOL">FOL
+                <p></p>
+            </td>
+            <td <id="Prog" onclick="cambiarEstilo(this)" class="Prog">Programación
+                <p></p>
+            </td>
+            <td <id="BD" onclick="cambiarEstilo(this)" class="BD">BBDD
+                <p></p>
+            </td>    
         </tr>
             
         <tr> 
             <th>17:35-18:30</th>    
-            <td id="change">LLMM</td>    
-            <td id="change">Programación</td>    
-            <td id="change">FOL</td>
-            <td id="change">Programación</td>
-            <td id="change">BBDD</td>    
+            <td <id="LM" onclick="cambiarEstilo(this)" class="LM">LLMM
+                <p></p>
+            </td>    
+            <td <id="Prog" onclick="cambiarEstilo(this)" class="Prog">Programación
+                <p></p>
+            </td>    
+            <td <id="FOL" onclick="cambiarEstilo(this)" class="FOL">FOL
+                <p></p>
+            </td>
+            <td <id="Prog" onclick="cambiarEstilo(this)" class="Prog">Programación
+                <p></p>
+            </td>
+            <td <id="BD" onclick="cambiarEstilo(this)" class="BD">BBDD
+                <p></p>
+            </td>    
         </tr>
+        <tr>
+            <th>18:30-18:45</th>
+            <td colspan="5"  <id="Patio" onclick="cambiarEstilo(this)" class="Patio">Patio
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+        <th>18:45-19:40</th>
+        
+            <td rowspan="2" id="RefLM" onclick="cambiarEstilo(this)" class="RefLM">Ref LLMM
+                <p></p>
+            </td>
+            <td <id="Tuto" onclick="cambiarEstilo(this)" class="Tutoría">Tutoría
+                <p></p>
+            </td>
+            <td rowspan="2" id="RefProg" onclick="cambiarEstilo(this)" class="RefProg">Ref Programación
+                <p></p>
+            </td>
+            
+        </tr>
+        <tr><th>19:40-20:30</th></tr>
     </table>
-    <button onclick="modifDiv()">Cambia tabla</button>
+    <!--<button onclick="modifDiv()">Cambia tabla</button>-->
 </body>
 </html>

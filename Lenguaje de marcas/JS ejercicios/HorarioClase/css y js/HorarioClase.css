@@ -1,12 +1,16 @@
 body{
-    background: #090806 url(https://s-media-cache-ak0.pinimg.com/originals/2c/58/41/2c584155e733de7b615693682074783a.jpg) no-repeat center;
+    /*background: #090806 url(https://s-media-cache-ak0.pinimg.com/originals/2c/58/41/2c584155e733de7b615693682074783a.jpg) no-repeat center;*/
+    background: #090806 url("../Img/luces.jpg") no-repeat center;
+    /*background: #090806 url(https://i.stack.imgur.com/NEuip.jpg) no-repeat center;*/
     background-attachment: fixed;
+    background-size: cover;
 }
 *{
     color:black;
 }
 h1{
-    color: white;
+    color: rgb(63, 91, 182);
+    text-shadow: 0.1em 0.1em rgba(127, 133, 12, 0.768);
 }
 #Horario {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -20,15 +24,67 @@ h1{
     border-radius: 5px;
 }
 
-#Horario tr:nth-child(even){background-color: #cccccc;}
+/*#Horario tr:nth-child(even){background-color: #cccccc;}
 #Horario tr:nth-child(odd){background-color: #bfff86;}
-
-/*#Horario tr:hover {background-color: #ddd;}*/
+#Horario tr:hover {background-color: #ddd;}*/
+#Horario tr {background-color: #bfff86;
+    text-align: center;}
+#Empty {
+    background: none;
+    /*background-color: rgb(255, 255, 255);*/
+    border: 5px;
+    border-color: #090806}
 
 #Horario th {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding:30;
     text-align: left;
     background-color: rgb(29, 110, 165);
     color: white;
 }
+
+.hoverCeldas{
+    background-color: rgb(194, 219, 242);
+    color: rgb(17, 130, 49);
+  }
+
+
+   /* estilos asignaturas */
+  
+   .BDModif{
+    background-color: rgb(4, 164, 76);
+    color: rgb(144, 179, 232);
+  }
+  
+  .LMModif{
+    background-color: rgb(196, 64, 41);
+    color: rgb(252, 210, 132);
+  }
+  
+  .RefLMModif{
+    background-color: rgb(252, 210, 132);
+    color: rgb(196, 64, 41);
+  }
+  
+  .ProgModif{
+    background-color: rgb(1, 144, 73);
+    color: rgb(149, 173, 223);
+  }
+  
+  .RefProgModif{
+    background-color:rgb(149, 173, 223);
+    color:rgb(1, 144, 73);
+  }
+  
+  .EDModif{
+    background-color:rgb(201, 64, 64);
+    color:rgb(199, 118, 118);
+  }
+  
+  .SIModif{
+    background-color:rgb(23, 0, 175);
+    color:rgb(93, 212, 255);
+  }
+  .TutoModif{
+      background-color: aquamarine;
+      color: blue;
+  }
