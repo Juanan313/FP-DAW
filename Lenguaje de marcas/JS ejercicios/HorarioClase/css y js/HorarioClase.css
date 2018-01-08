@@ -50,41 +50,45 @@ h1{
 
    /* estilos asignaturas */
   
-   .BDModif{
-    background-color: rgb(4, 164, 76);
-    color: rgb(144, 179, 232);
+   .BBDD{
+    background-color: rgb(173, 78, 221);
+    color: rgb(106, 2, 97);
   }
   
-  .LMModif{
-    background-color: rgb(196, 64, 41);
+  .LLMM{
+    background-color: rgb(223, 79, 54);
     color: rgb(252, 210, 132);
   }
   
-  .RefLMModif{
+  .RefLLMM{
     background-color: rgb(252, 210, 132);
-    color: rgb(196, 64, 41);
+    color: rgb(223, 79, 54);
   }
   
-  .ProgModif{
+  .Programación{
     background-color: rgb(1, 144, 73);
     color: rgb(149, 173, 223);
   }
   
-  .RefProgModif{
+  .RefProgramación{
     background-color:rgb(149, 173, 223);
     color:rgb(1, 144, 73);
   }
   
-  .EDModif{
-    background-color:rgb(201, 64, 64);
-    color:rgb(199, 118, 118);
+  .ED{
+    background-color:rgb(201, 135, 64);
+    color:rgb(82, 35, 0);
   }
   
-  .SIModif{
-    background-color:rgb(23, 0, 175);
-    color:rgb(93, 212, 255);
+  .SI{
+    background-color:rgb(93, 212, 255);
+    color:rgb(23, 0, 175);
   }
-  .TutoModif{
+  .Tutoría{
       background-color: aquamarine;
       color: blue;
+  }
+  .FOL{
+      background-color: aliceblue;
+      color: black;
   }
