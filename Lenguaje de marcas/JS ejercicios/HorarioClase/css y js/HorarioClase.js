@@ -132,14 +132,14 @@ var asignaturas = {
 
 document.addEventListener("mouseover", function(e){
   var obj = e.target;
-  if(obj.tagName == 'TD' && obj != obj.parentElement.childNodes[1]){
+  if(obj.tagName == 'TD'){
     obj.classList.toggle('hoverCeldas',true);
   }
 });
 
 document.addEventListener("mouseout", function(e){
   var obj = e.target;
-  if(obj.tagName == 'TD' && obj != obj.parentElement.childNodes[1]){
+  if(obj.tagName == 'TD'){
     obj.classList.toggle('hoverCeldas',false);
   }
 });
@@ -181,7 +181,7 @@ function datosAsignaturas(asignatura){
 
 document.addEventListener("click", function(e){
     var obj = e.target;
-    if(obj.tagName == 'TD' && obj != obj.parentElement.childNodes[1]){
+    if(obj.tagName == 'TD'){
       var asignatura = obj.innerText.split("\n")[0];
       datosAsignaturas(asignatura);
     }
