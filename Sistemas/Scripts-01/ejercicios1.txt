@@ -1,0 +1,26 @@
+1.- Fes un script que comprovi que saludi a l’usuari actual pel seu nom   OK
+2.- Fes un script que Introduïnt un nom, comprovi si és el de l’usuai actual del, si és així, el saludes pel seu
+nom i si no et despedeixes amb un “hasta luego” seguit del nom de l’usuari   OK
+3. Realitza un script que comprovi si avui és dia 25, si es así mostrará un missatge felicitant el dia, i si no
+apareixerà el text “avui es dia” + dia actual, “tonto”.  OK
+4. Cream un fitxer de txt i li copiam tres línies de text d’internet. Hem de fer un script que introduïnt una
+paraula per pantalla, comprovi si està al fitxer  OK
+5. Realitza un script que comprovi si las tres primeras columnas d’un fitxer (que conté només una línia)
+són iguals o diferents.   
+6. Realitza lo mateix pero tenint en compta que el fitxer està comprimit amb gzip.
+7. Crea tres fitxers de text text71.txt amb continguts (“tengo una vaca lechera, no es una vaca
+cualquiera”), text72.txt amb contingut (“me da leche merengada, ay! que vaca tan salada”) i text72.txt
+amb contigut (“Tolón, tolón, tolón , tolón”). Es demana realitzar un script que generi un fitxer de text
+anomenat supervaca7.txt amb les línies dels tres primers fitxers
+8. Tenc un fitxer anomenat fulanos.txt que contiene dos columnas <nom fulano> <país de procedència>.
+Es dessitja saber el nom dels ciutadans de Lepelandia. Ejemplo de fichero:
+Juan Holanda
+Pedro Lepelandia
+Ramiro Rusia
+Josue Dinamarca
+Miquel Tabarnia
+9. Realitza un script que representi un menú amb 6 opcions (1,2,3,4,5,6), recollirá un entrada per pantalla
+i per cada entrada veurem un missatge amb núm de la opció, l’opció 6 sortirà i si s’entra un num, no
+inclòs a la llista donarà un missatge d’error. Només podrem sortir del bucle si clicam el núm 6.
+10.- Realitza un script que faci de menú on puguis elegir cada un dels 9 exercicis anteriors. Ha de tenir
+una sortida i al final de cada escript has de tornar al menu 
