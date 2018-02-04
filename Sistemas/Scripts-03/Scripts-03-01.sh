@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Por favor introduce un número para saber su factorial"
+echo "Introduce un número para calcular su factorial"
 read num
 n=$num
 fact=1

@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Por favor introduce el número que desee elevar al cuadrado"
+echo "Por favor introduce un número para obtener el resultado de elevarlo al cuadrado"
 read num
 cuadrado=`expr $num \* $num`
-echo "El número al cuadrado de $num es $cuadrado"
+echo "El resultado de elevar al cuadrado $num es $cuadrado"

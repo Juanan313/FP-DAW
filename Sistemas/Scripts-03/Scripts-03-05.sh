@@ -2,5 +2,5 @@
 echo "Numero de parametros pasados: $# ";
 for param in "$@"
 do
-find / -name *.param;
+find ./ -name *.param;
 done
