@@ -1,0 +1,22 @@
+1. Puja un fitxer que faci un dir, ho posi dins un fitxer de text i mostri el contingut del fixer de text
+per pantalla
+2. Crea un script que mostri un missatge de benvinguda, la data i hora actuals i el nom de l’usuari
+actual, prompt del directori actual i una vegada fet ha de netejar la pantalla. Ha de dar temps de
+veure els missatges. OK
+3. Crear un script que utilitzi paràmetres per crear dues carpetes (carpt01 i carpt02), i a dintre de
+carpt 01, els arxius de text pepet.txt, tomeuet.txt, i de carpt02, els arxius auvesten.txt i
+acauna.txt. OK
+a. Ha de visualitzar aquesta estructura i després l’ha d’eliminar, i tornar mostrar. Per a cada
+acció ha de sortir un missatge indicant el que fa.
+4. Crear un script que presenti un bucle de 3 línies que es van alternant. Ha de quedar documentat
+el que fa i el bucle no ha de tenir sortida pròpia. OK
+5. Modificar l’exercici 3 de forma que comprovi si hem creat les carpetes abans d’esborrar-les
+(necessites la instrucció IF) OK
+6. Modificar l’exercici 5 de forma que no crei cap carpeta que no li donem per paràmetre.
+7. Crear un script que crei un bucle però que poguem sortir amb un paràmetre.
+8. Crear un menú de 5 opcions i que segons la opció que cliquem ens indiqui un missatge de cada
+opció, i torni carregar el menú.
+9. Crea un bucle comptador de 1 a 30. En ha de indicar només els números per pantalla que siguin
+parells.
+10. Crea un menú que cridi els programes dels exercicis 1 a 9 segons el numero introduït i que en
+acabar torni aparèixer el menú. Pensa que hauràs de modificar els bucles que estiguin tancats.
