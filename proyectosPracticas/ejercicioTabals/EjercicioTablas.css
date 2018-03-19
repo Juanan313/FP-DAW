@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+header {
+    background-color: greenyellow;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.id1 {
+    background-color: deepskyblue;
+    width: 50%;
+    height: 50vh;
+    float: left;
+}
+
+.id2 {
+    background-color: yellow;
+    width: 50%;
+    height: 50vh;
+    float: left;
+}
+
+button {
+    background-color: rgb(104, 206, 104);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
