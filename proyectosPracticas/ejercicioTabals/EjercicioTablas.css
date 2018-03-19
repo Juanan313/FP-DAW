@@ -14,18 +14,23 @@ header {
 
 
 
-.id1 {
-    background-color: deepskyblue;
+#id1 {
+    background-color: blue;
     width: 50%;
     height: 50vh;
     float: left;
 }
 
-.id2 {
+#id2 {
     background-color: yellow;
     width: 50%;
     height: 50vh;
     float: left;
+}
+
+.floatRight {
+    float: right;
+    margin-right: 3px;
 }
 
 button {
