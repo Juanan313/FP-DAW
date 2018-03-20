@@ -35,15 +35,17 @@ window.onload = function() {
         var elemento = e.target;
         var escape = false;
         
-        if (elemento.tagName == "BUTTON" || elemento.id == ("insertText1" || "insertText2")) {
+        if (elemento.tagName == "BUTTON" || (elemento.id == ("insertText1" || "insertText2"))) {
             return false;
         }
         while (escape == false) {
             if (elemento == null) {
                 escape = true;
-            } else if (elemento.id == "tabla") {
+            } else if (elemento.id == "tablaid1") {
                 return false;
-            }
+            } else if (elemento.id == "tablaid2") {
+				return false;
+			}
             else {
                 elemento = elemento.parentNode;
             } 
@@ -85,7 +87,7 @@ window.onload = function() {
     }
 
     function crearTabla(id) {
-        var table = "<table id='tabla'>";
+        var table = "<table id='tabla"+id+"'>";
         for ( i=0; i < 5; i++ ) {
             table += "<tr>";
             for ( n=1; n < 7; n++) {
@@ -100,7 +102,7 @@ window.onload = function() {
     }
 
         function deselectCeldas() {
-
+		
         var arrayCeldas = document.getElementsByClassName("selected");
         /*for (i=0; i < arrayCeldas.length; i++) {
             arrayCeldas[i].className = "";
@@ -109,9 +111,6 @@ window.onload = function() {
         while (arrayCeldas.length > 0) {
             arrayCeldas[0].className = "";
         }
-
-        for (var celda in arrayCeldas) {
-            celda.className = "";
-        }
+        
     }
     
