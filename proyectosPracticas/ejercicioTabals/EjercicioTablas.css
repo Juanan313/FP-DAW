@@ -15,14 +15,14 @@ header {
 
 
 #id1 {
-    background-color: blue;
+    background-color: black;
     width: 50%;
     height: 50vh;
     float: left;
 }
 
 #id2 {
-    background-color: yellow;
+    background-color: grey;
     width: 50%;
     height: 50vh;
     float: left;
@@ -41,4 +41,31 @@ button {
     border: none;
     cursor: pointer;
     width: auto;
+    margin-left: 3px;
+}
+
+table {
+    border: 1px solid #ddd;
+    background-color: rgb(255, 193, 78);
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+td, tr {
+    border: 2px solid black;
+    text-align: center;
+}
+
+input[type=text]
+{
+    color: black;
+    height: 28px;
+    padding-left: 10px;
+    background-color: greenyellow;
+    background-repeat: repeat-x;
+    border-radius: 5px;
+    border: 0;
+    margin: 0px 10px;
 }
