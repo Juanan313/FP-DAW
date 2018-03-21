@@ -1,41 +1,41 @@
-window.onload = function() {
+window.onload = function () {
 
-    $( "#buttonTable1" ).on( "click", function(){
+    $("#buttonTable1").on("click", function () {
         crearTabla("id1");
     });
 
-    $( "#buttonTable2" ).on( "click", function(){
+    $("#buttonTable2").on("click", function () {
         crearTabla("id2");
     });
 
-    $( "#buttonColor1" ).on( "click", function(){
-        
+    $("#buttonColor1").on("click", function () {
+
         cambiarColor("id1");
     });
 
-    $( "#buttonColor2" ).on( "click", function(){
+    $("#buttonColor2").on("click", function () {
         cambiarColor("id2");
     });
-        
-    $( "#buttonInsertText1" ).on( "click", function(){
+
+    $("#buttonInsertText1").on("click", function () {
         insertarTexto("insertText1");
     });
 
-    $( "#buttonInsertText2" ).on( "click", function(){
+    $("#buttonInsertText2").on("click", function () {
         insertarTexto("insertText2");
     });
-    
-    document.addEventListener("click", function(e){
-        var elemento = e.target;
 
-        selectCeldas(elemento);    
+    $(".celda").on("click", function (e) {
+        var elemento = e.target;
+        selectCeldas(elemento);
+        
     });
 
-    document.addEventListener("click", function(e) {
+    document.addEventListener("click", function (e) {
         var elemento = e.target;
         var escape = false;
-        
-        if (elemento.tagName == "BUTTON" || (elemento.id == ("insertText1" || "insertText2"))) {
+
+        if (elemento.tagName.toLowerCase() == "button" || (elemento.id == ("insertText1" || "insertText2"))) {
             return false;
         }
         while (escape == false) {
@@ -44,77 +44,79 @@ window.onload = function() {
             } else if (elemento.id == "tablaid1") {
                 return false;
             } else if (elemento.id == "tablaid2") {
-				return false;
-			}
+                return false;
+            }
             else {
                 elemento = elemento.parentNode;
-            } 
+            }
         }
 
         deselectCeldas(elemento);
-        }
-    )};
-
-    function selectCeldas(elemento) {
-
-        if (elemento.tagName == "TD" && elemento.className != "selected" ) {
-            elemento.className = "selected";
-        } else if (elemento.tagName == "TD" && elemento.className == "selected") {
-            elemento.className = "";
-        } 
     }
+    )
+};
 
+function selectCeldas(elemento) {
+
+    elemento.toggleClass("selected");
     
-    // refactorizado a jquery
+}
 
-    function cambiarColor(id) {
-        var selector = "#" + id;
-        var div1 = $(selector);
-        
-        div1.toggleClass("fondo1 fondo2")
 
+// refactorizado a jquery
+
+function cambiarColor(id) {
+    var selector = "#" + id;
+    var div1 = $(selector);
+
+    div1.toggleClass("fondo1 fondo2");
+
+}
+
+// refact to jquery
+
+function insertarTexto(id) {
+    var arrayCeldas = $(".selected");
+    var selector = "#" + id;
+    var textoAInsertar = $(selector).val();
+    for (i = 0; i < arrayCeldas.length; i++) {
+        arrayCeldas[i].innerHTML = textoAInsertar;
     }
+}
 
-    // refact to jquery
+// refactorizado a jquery
 
-    function insertarTexto(id) {
-        var arrayCeldas = $(".selected");
-        var selector = "#" + id;
-        var textoAInsertar = $(selector).val(); 
-        for (i=0; i < arrayCeldas.length; i++) {
-            arrayCeldas[i].innerHTML= textoAInsertar;
-        } 
 
-    }
+function crearTabla(idDiv) {
 
-    // refactorizado a jquery
+    var selector;
 
-    function crearTabla(id) {
-        var table = "<table id='tabla"+id+"'>";
-        var selector;
-        for ( i=0; i < 5; i++ ) {
-            table += "<tr>";
-            for ( n=1; n < 7; n++) {
-                table += " <td>"+"</td>"
-            }
-            
-            table += "</tr>";
+    mytable = $('<table></table>').attr({ id: "table" });
+    var filas = new Number($("#rowcount").val());
+    var columnas = new Number($("#columncount").val());
+    var tr = [];
+    for (var i = 0; i < filas; i++) {
+        var row = $('<tr></tr>').attr({ class: ["class1"] }).appendTo(mytable);
+        for (var j = 0; j < columnas; j++) {
+            $('<td></td>').appendTo(row);
         }
-        table += "</table>";
-        selector = "#" + id;
-        $(selector).html(table);
+
+    }
+    selector = "#" + idDiv;
+    $(selector).html(mytable);
+
+}
+
+function deselectCeldas() {
+
+    var arrayCeldas = document.getElementsByClassName("selected");
+    /*for (i=0; i < arrayCeldas.length; i++) {
+        arrayCeldas[i].className = "";
+    }*/
+
+    while (arrayCeldas.length > 0) {
+        arrayCeldas[0].className = "";
     }
 
-        function deselectCeldas() {
-		
-        var arrayCeldas = document.getElementsByClassName("selected");
-        /*for (i=0; i < arrayCeldas.length; i++) {
-            arrayCeldas[i].className = "";
-        }*/
+}
 
-        while (arrayCeldas.length > 0) {
-            arrayCeldas[0].className = "";
-        }
-        
-    }
-    
