@@ -15,17 +15,25 @@ header {
 
 
 #id1 {
-    background-color: black;
+    
     width: 50%;
     height: 50vh;
     float: left;
 }
 
 #id2 {
-    background-color: grey;
+    
     width: 50%;
     height: 50vh;
     float: left;
+}
+
+.fondo1 {
+    background-color: grey;
+}
+
+.fondo2 {
+    background-color: black;
 }
 
 .floatRight {
