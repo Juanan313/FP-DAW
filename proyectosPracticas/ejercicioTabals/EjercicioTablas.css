@@ -59,12 +59,11 @@ table {
     height: 90%;
     margin: 0 auto;
     margin-top: 10px;
+    
 }
 
 td, tr {
     border: 2px solid black;
-    
-    
 }
 
 input[type=text]
@@ -82,4 +81,14 @@ input[type=text]
 .selected {
     border: solid 2px firebrick;
     background-color: darkseagreen;
+}
+
+.fila:hover {
+    background-color: lightblue;
+}
+
+div.contenedor {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
