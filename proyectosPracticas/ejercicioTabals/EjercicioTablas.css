@@ -16,14 +16,14 @@ header {
 
 #id1 {
     
-    width: 50%;
+    width: 40%;
     height: 50vh;
     float: left;
 }
 
 #id2 {
     
-    width: 50%;
+    width: 40%;
     height: 50vh;
     float: left;
 }
@@ -91,4 +91,11 @@ div.contenedor {
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+aside {
+    float: left;
+    width: 20%;
+    height: 50vh;
+    background-color: aquamarine;
 }

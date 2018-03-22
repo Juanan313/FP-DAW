@@ -37,7 +37,7 @@ window.onload = function () {
         return false;
     });
 
-    $("body").on("click", function (e) {
+    $("html").on("click", function (e) {
 
         var elemento = e.target;
         if (elemento.tagName.toLowerCase() != "button" && elemento.tagName.toLowerCase() != "input") {
