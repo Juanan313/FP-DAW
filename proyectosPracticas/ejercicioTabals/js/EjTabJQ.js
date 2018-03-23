@@ -1,5 +1,7 @@
 window.onload = function () {
 
+    // Cargar todas las funciones en sus respectivos eventos en la función Onload.
+
     $("#dialog1").dialog({ autoOpen: false });
 
     $("#buttonTable1").on("click", function () {
@@ -56,7 +58,7 @@ window.onload = function () {
         var elemento = e.target;
         var tagElemento = elemento.tagName.toLowerCase();
 
-        if ( tagElemento != "button" && tagElemento != "input" && tagElemento != "aside"  )
+        if ( tagElemento != "button" && tagElemento != "input" && tagElemento != "aside" && tagElemento != "table")
              deselectCeldas("td.selected");         
     })
 
@@ -99,14 +101,6 @@ window.onload = function () {
 
 };
 
-// function selectCeldas(elemento) {
-
-//     elemento.toggleClass("selected");
-
-// }
-
-
-// refactorizado a jquery
 
 function cambiarColor(id) {
     var selector = "#" + id;
@@ -116,22 +110,13 @@ function cambiarColor(id) {
 
 }
 
-// refact to jquery
 
 function insertarTexto(id) {
-    // var arrayCeldas = $(".selected");
-
-    // var textoAInsertar = $(selector).val();
-    // for (i = 0; i < arrayCeldas.length; i++) {
-    //     arrayCeldas[i].innerHtml = "pruebas";
-    // }
 
     var selector = "#" + id;
     var celdasSeleccionadas = $(".selected");
     celdasSeleccionadas.html($('<div class="contenedor">' + $(selector).val() + '</div>'))
 }
-
-// refactorizado a jquery
 
 
 function crearTabla(idDiv) {
