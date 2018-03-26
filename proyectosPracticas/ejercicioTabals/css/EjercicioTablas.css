@@ -146,3 +146,23 @@ aside {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: none;
 }
+
+select {
+    background-color: greenyellow;
+    border-radius: 5px;
+    width: 80%;
+    
+}
+
+#oculto1 {
+    display: none;
+    width: 50%;
+    margin: 3px;
+}
+
+#oculto2 {
+    display: none;
+    width: 45%;
+    margin: 3px;
+}
+

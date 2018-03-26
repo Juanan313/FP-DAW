@@ -33,13 +33,19 @@ window.onload = function () {
         cambiarColor("id2");
     });
 
+    $("#insertText1").keypress(function(e) {
+        if(e.which == 13) {
+        insertarTexto("insertText1");
+        }
+    })
+
     $("#buttonInsertText1").on("click", function () {
         insertarTexto("insertText1");
     });
 
-    $("#buttonInsertText2").on("click", function () {
-        insertarTexto("insertText2");
-    });
+    // $("#buttonInsertText2").on("click", function () {
+    //     insertarTexto("insertText2");
+    // });
 
     $("body").on("click", ".celda", function () {
 
@@ -50,7 +56,17 @@ window.onload = function () {
         } else if ($(this).closest("#tablaid2").length > 0 || $(this).attr("id") == "tablaid2") {
             deselectCeldas("#tablaid1 .selected")
         }
+        
+        if ($("#tablaid2 .selected").length > 0 ) {
+            $("#oculto2").css("display", "inline-block");
+        }
+        
+        if ($("#tablaid1 .selected").length > 0 ) {
+            $("#oculto1").css("display", "inline-block");
+        }
         return false;
+
+
     });
 
     $("html").on("click", function (e) {
@@ -58,7 +74,7 @@ window.onload = function () {
         var elemento = e.target;
         var tagElemento = elemento.tagName.toLowerCase();
 
-        if ( tagElemento != "button" && tagElemento != "input" && tagElemento != "aside" && tagElemento != "table")
+        if ( tagElemento != "button" && tagElemento != "input" && tagElemento != "aside" && tagElemento != "table" && tagElemento != "select")
              deselectCeldas("td.selected");         
     })
 
@@ -84,6 +100,14 @@ window.onload = function () {
         celdasConTexto("#tablaid2");
     })
 
+    $("#borrar1").on("click", function () {
+        borrarTextoCeldas("#tablaid1");
+    })
+
+    $("#borrar2").on("click", function () {
+        borrarTextoCeldas("#tablaid2");
+    })
+
     $( document ).tooltip({
       position: {
         my: "center bottom-20",
@@ -98,6 +122,32 @@ window.onload = function () {
         }
       }
     });
+
+    $.ajax({
+        type: "GET",
+        url: "user.json",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            var selectsID = $.parseJSON(data);
+
+            //Select tabla1
+            $.each(selectsID, function (i, d) {
+                $('#select1').append('<option value="' + d.id + '">'+"Usuario con ID:"+d.id+ '</option>');
+            });
+
+            //Nationality Select
+            $.each(selectsID, function (i, d) {
+                $('#select2').append('<option value="' + d.id + '">'+"Usuario con ID:"+d.id+ '</option>');
+            });
+
+        },
+        error: function (e) {
+            console.log(e.responseText);
+            alert("Error al procesar la petición AJAX de Usuarios.");
+        }
+    }); 
+
 
 };
 
@@ -153,6 +203,14 @@ function deselectCeldas(selector) {
     celdasSeleccionadas = $(selector);
     console.log(celdasSeleccionadas);
     celdasSeleccionadas.toggleClass("selected");
+    
+    if ($("#tablaid2 .selected").length >= 0 ) {
+        $("#oculto2").css("display", "none");
+    }
+    
+    if ($("#tablaid1 .selected").length >= 0 ) {
+        $("#oculto1").css("display", "none");
+    }
 }
 
 function celdasConTexto(id) {
@@ -169,6 +227,14 @@ function celdasConTexto(id) {
     $("#dialog1").dialog({
         title: "Celdas Escritas:"
    }).text("En la tabla 1 hay " + totalCeldasEscritas + " celdas con texto.").dialog("open");
+}
+
+function borrarTextoCeldas(id) {
+    var celdas = $(id+" .selected");
+
+    celdas.each(function (i, v) {
+        $(this).html("");
+    });
 }
 
 
