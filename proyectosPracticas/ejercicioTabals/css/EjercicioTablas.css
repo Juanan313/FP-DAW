@@ -32,11 +32,11 @@ h1 {
 }
 
 .fondo1 {
-    background-color: grey;
+    background-color: rgb(169, 199, 0);
 }
 
 .fondo2 {
-    background-color: black;
+    background-color: rgb(17, 6, 179);
 }
 
 .floatRight {
@@ -131,10 +131,12 @@ input[type=number]
 }
 
 div.contenedor {
-    position: absolute;
+    position: relative;
     width: auto;
     height: auto;
     align-self: center;
+    word-wrap: break-all;
+    flex-grow: 1;
 }
 
 aside {

@@ -108,6 +108,10 @@ window.onload = function () {
         borrarTextoCeldas("#tablaid2");
     })
 
+    $("#select1").change(function() {
+        selectUserInfo("#select1");
+    })
+
     $( document ).tooltip({
       position: {
         my: "center bottom-20",
@@ -125,11 +129,11 @@ window.onload = function () {
 
     $.ajax({
         type: "GET",
-        url: "user.json",
+        url: "https://jsonplaceholder.typicode.com/users",
         contentType: "application/json; charset=utf-8",
-        dataType: "json",
+        dataType: "jsonp",
         success: function (data) {
-            var selectsID = $.parseJSON(data);
+            var selectsID = data;
 
             //Select tabla1
             $.each(selectsID, function (i, d) {
@@ -201,7 +205,6 @@ function deselectCeldas(selector) {
 
     var celdasSeleccionadas;
     celdasSeleccionadas = $(selector);
-    console.log(celdasSeleccionadas);
     celdasSeleccionadas.toggleClass("selected");
     
     if ($("#tablaid2 .selected").length >= 0 ) {
@@ -237,4 +240,29 @@ function borrarTextoCeldas(id) {
     });
 }
 
+function selectUserInfo(id) {
+
+    var celdasSeleccionadas = $(".selected");
+    var id = $(id + " option:selected").val();
+
+    $.ajax({
+        type: "GET",
+        url: "https://jsonplaceholder.typicode.com/users",
+        contentType: "application/json; charset=utf-8",
+        dataType: "jsonp",
+        success: function (data) {
+            $.each(data, function (i, v) {
+                if (v.id == id) {
+                    celdasSeleccionadas.each(function (index, celda) {
+                        $(celda).attr("title", "Usuario con ID: " + v.id).html($('<div class="contenedor">' + v.name + "<br/>" + v.username + '</div>'))
+                    });
+                };
+            });
+        },
+        error: function (e) {
+            console.log(e.responseText);
+            alert("Error al procesar la petición AJAX de Usuarios.");
+        }
+    });
+}
 
