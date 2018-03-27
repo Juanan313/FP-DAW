@@ -1,3 +1,5 @@
+var DATA = [];
+
 window.onload = function () {
 
     // Cargar todas las funciones en sus respectivos eventos en la función Onload.
@@ -88,6 +90,7 @@ window.onload = function () {
 
     $("#showhidemenu").on("click", function () {
         $("aside").toggle("slide", 100);
+        $(".usersDrag").toggle("clip", 100);
         $(".div40").switchClass("div40", "div50", 100);
         $(".div50").switchClass("div50", "div40", 100);
     });
@@ -137,8 +140,9 @@ window.onload = function () {
         contentType: "application/json; charset=utf-8",
         dataType: "jsonp",
         success: function (data) {
+            DATA = data;
             var selectsID = data;
-
+            
             //Select tabla1
             $.each(selectsID, function (i, d) {
                 $('#select1').append('<option value="' + d.id + '">'+"Usuario con ID:"+d.id+ '</option>');
@@ -157,6 +161,7 @@ window.onload = function () {
     }); 
 
 
+    creaObjetosDragables();
 };
 
 
@@ -196,7 +201,13 @@ function crearTabla(idDiv) {
     for (var i = 0; i < filas; i++) {
         var row = $('<tr></tr>').addClass("fila").appendTo(mytable);
         for (var j = 0; j < columnas; j++) {
-            $('<td></td>').addClass("celda").attr({ title: tituloCeldas }).appendTo(row);
+            $('<td></td>').addClass("celda").attr({ title: tituloCeldas }).droppable({
+                    accept: ".box",
+                    drop: function(e, ui){
+                        var dragElement = ui.draggable[0];
+                        $(this).html(dragElement.data("user"));
+                    }
+                  }).appendTo(row);
         }
 
     }
@@ -258,6 +269,18 @@ function selectUserInfo(id) {
     var celdasSeleccionadas = $(".selected");
     var id = $(id + " option:selected").val();
 
+    $.each(DATA, function (i, v) {
+        if (v.id == id) {
+            celdasSeleccionadas.each(function (index, celda) {
+                $(celda).attr("title", "Usuario con ID: " + v.id).html($('<div class="contenedor">' + v.name + "<br/>" + v.username + '</div>'))
+                });
+            };
+        });
+        }
+
+
+
+function creaObjetosDragables() {
     $.ajax({
         type: "GET",
         url: "https://jsonplaceholder.typicode.com/users",
@@ -265,17 +288,17 @@ function selectUserInfo(id) {
         dataType: "jsonp",
         success: function (data) {
             $.each(data, function (i, v) {
-                if (v.id == id) {
-                    celdasSeleccionadas.each(function (index, celda) {
-                        $(celda).attr("title", "Usuario con ID: " + v.id).html($('<div class="contenedor">' + v.name + "<br/>" + v.username + '</div>'))
-                    });
-                };
-            });
-        },
-        error: function (e) {
+                var userDrag = ($("<div/>").addClass("box").append($("<span/>").append(v.username)).data("user",v).draggable({
+                    snap: true, opacity: 0.7, helper: "clone", cursorAt: { top: -5, left: -5 }
+                }));
+                $(".usersDrag").append(userDrag);
+            })
+        }, error: function (e) {
             console.log(e.responseText);
             alert("Error al procesar la petición AJAX de Usuarios.");
         }
     });
+
 }
+
 
