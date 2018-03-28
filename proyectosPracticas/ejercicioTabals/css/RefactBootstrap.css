@@ -23,22 +23,9 @@ h1 {
     padding-top: 5px;
 }
 
-.div40{
+.divTablas{
     height: 50vh;
     float: left;
-}
-
-.div50 {
-    height: 50vh;
-    float: left;
-}
-
-.fondo1 {
-    background-color: rgb(169, 199, 0);
-}
-
-.fondo2 {
-    background-color: rgb(17, 6, 179);
 }
 
 .floatRight {
@@ -89,12 +76,14 @@ table {
 
 #tablaid1 {
     background-color: rgb(29, 243, 172);
-    table-layout:fixed
+    table-layout:fixed;
+    border-collapse: separate !important;
 }
 
 #tablaid2 {
     background-color: steelblue;
-    table-layout:fixed
+    table-layout:fixed;
+    border-collapse: separate !important;
 }
 
 td, tr {
@@ -148,12 +137,9 @@ div.contenedor {
 
 aside {
     float: left;
-    width: 20%;
     height: 50vh;
-    background-color:rgba(0, 27, 16, 0.932);
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    display: none;
 }
 
 select {
@@ -176,15 +162,15 @@ select {
     margin-top:5px;
 }
 
-.usersDrag {
-    width: 100%;
+/* .usersDrag {
     height: 100px;
+    width: 100%;
     background-color: rgb(0, 0, 0);
     position: absolute;
     top: 470px;
     display: none;
     
-}
+} */
 
 .box {
     height: 55px;
@@ -203,5 +189,3 @@ select {
 div.box span{
     vertical-align: middle;
 }
-
-

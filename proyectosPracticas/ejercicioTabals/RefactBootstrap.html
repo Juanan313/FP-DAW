@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/RefactBootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/RefactBootstrap.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery-ui/jquery-ui.min.js"></script>
+    <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+    <title>DragAndDrop Práctica</title>
+</head>
+<body>
+    <header class="col-md-12 bg-success">
+        <button id="showhidemenu" class="btn float-left " title="Muestra y oculta el menú de las tablas"><i class="fa fa-bars"></i></button>
+        <h1>Ejercicio Tablas</h1>
+    </header>
+    <main>
+        <aside id ="lateralMenu" class="col-md-2 bg-warning d-none">
+            <div class="container">
+                <button id="buttonColor1" class="btn btn-primary btn-sm m-1" title="Cambia el color de fondo de la tabla 1">Color Fondo 1</button>
+                <button id="buttonColor2" class="btn btn-primary btn-sm m-1 floatRight" title="Cambia el color de fondo de la tabla 2">Color Fondo 2</button>
+                <button id="buttonTable1" class="btn btn-primary btn-sm m-1">Crear tabla</button>
+                <button id="buttonTable2" class="btn btn-primary btn-sm m-1 floatRight">Crear tabla 2</button><br/>
+                <button id="buttonShowHide1" class="btn btn-primary btn-sm m-1">Show/Hide1</button>
+                <button id="buttonShowHide2" class="btn btn-primary btn-sm m-1 floatRight">Show/Hide2</button><br/>
+                <button id="moreInfo1" class="btn btn-primary btn-sm m-1">Más info1</button>
+                <button id="moreInfo2" class="btn btn-primary btn-sm m-1 floatRight">Más info2</button><br/>
+                <span>Filas: </span>    <input type="number" id="rowcount" class="floatRight" value="6"/><br/><br/>
+                <span>Columnas: </span> <input type="number" id="columncount" class="floatRight" value="6"/><br/><br/>
+                <span>Texto a insertar: </span> <input type="text" id="insertText1" class="floatRight"><br/>
+
+
+                <div id="oculto1">
+                    <button id="borrar1" class="style">Borrar Texto 1</button><br/>
+                    <select name="idsUsuarios" id="select1"></select>
+                </div>
+                <div id="oculto2" class="floatRight">
+                    <button id="borrar2" class="style floatRight">Borrar Texto 2</button> <br/>
+                    <select name="idsUsuarios" id="select2" class="floatRight"></select>
+                </div>
+            </div>
+        </aside>
+            <div id="id1" class="divTablas fondo2 col-md-6 bg-primary"></div>
+            <div id="id2" class="divTablas fondo1 col-md-6 bg-secondary"></div>
+            <div id="dialog1"></div>
+        <div class="col-md-12 w-100 bg-secondary">
+                <div class="usersDrag"></div>
+        </div>
+    </main>
+</body>
+</html>

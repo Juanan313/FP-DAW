@@ -2,6 +2,9 @@ var DATA = [];
 
 window.onload = function () {
 
+    $.widget.bridge('uibutton', $.ui.button);
+    $.widget.bridge('uitooltip', $.ui.tooltip);
+
     // Cargar todas las funciones en sus respectivos eventos en la función Onload.
 
     $("#dialog1").dialog({ autoOpen: false });
@@ -89,10 +92,13 @@ window.onload = function () {
     });
 
     $("#showhidemenu").on("click", function () {
-        $("aside").toggle("slide", 100);
-        $(".usersDrag").toggle("clip", 100);
-        $(".div40").switchClass("div40", "div50", 100);
-        $(".div50").switchClass("div50", "div40", 100);
+        // $("aside").toggle("slide", 1000);
+        $("aside.d-none").switchClass("d-none","d-block",1000);
+        $("aside.d-block").switchClass("d-block","d-none",1000);
+        $(".usersDrag").toggle("clip", 1000);
+        $(".divTablas.col-md-5").switchClass("col-md-5", "col-md-6", 1000);
+        $(".divTablas.col-md-6").switchClass("col-md-6", "col-md-5", 1000);
+
     });
 
     $("#moreInfo1").on("click", function () {
@@ -176,7 +182,7 @@ function cambiarColor(id) {
     var selector = "#" + id;
     var div1 = $(selector);
 
-    div1.toggleClass("fondo1 fondo2");
+    div1.toggleClass("bg-primary bg-secondary");
 
 }
 
