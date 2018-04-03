@@ -25,11 +25,13 @@ h1 {
 
 .div40{
     height: 50vh;
+    width: 40%;
     float: left;
 }
 
 .div50 {
     height: 50vh;
+    width: 50%;
     float: left;
 }
 

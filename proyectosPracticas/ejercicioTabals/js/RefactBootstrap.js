@@ -7,6 +7,11 @@ window.onload = function () {
 
     // Cargar todas las funciones en sus respectivos eventos en la función Onload.
 
+
+     $('#datepicker').datepicker({
+         uiLibrary: 'bootstrap4'
+     });
+     
     $("#dialog1").dialog({ autoOpen: false });
 
     $("#buttonTable1").on("click", function () {
@@ -61,11 +66,11 @@ window.onload = function () {
         } else if ($(this).closest("#tablaid2").length > 0 || $(this).attr("id") == "tablaid2") {
             deselectCeldas("#tablaid1 .selected")
         }
-        
+
         if ($("#tablaid2 .selected").length > 0 ) {
             $("#oculto2").css("display", "inline-block");
         }
-        
+
         if ($("#tablaid1 .selected").length > 0 ) {
             $("#oculto1").css("display", "inline-block");
         }
@@ -80,7 +85,7 @@ window.onload = function () {
         var tagElemento = elemento.tagName.toLowerCase();
 
         if ( tagElemento != "button" && tagElemento != "input" && tagElemento != "aside" && tagElemento != "table" && tagElemento != "select")
-             deselectCeldas("td.selected");         
+             deselectCeldas("td.selected");
     })
 
     $("#buttonShowHide1").click(function () {
@@ -93,9 +98,10 @@ window.onload = function () {
 
     $("#showhidemenu").on("click", function () {
         // $("aside").toggle("slide", 1000);
-        $("aside.d-none").switchClass("d-none","d-block",1000);
-        $("aside.d-block").switchClass("d-block","d-none",1000);
-        $(".usersDrag").toggle("clip", 1000);
+        $(".d-none").switchClass("d-none","d-block",1000);
+        $(".d-block").switchClass("d-block","d-none",1000);
+        // $(".usersDrag.d-none").switchClass("d-none","d-block",1000);
+        // $(".usersDrag.d-block").switchClass("d-block","d-none",1000);
         $(".divTablas.col-md-5").switchClass("col-md-5", "col-md-6", 1000);
         $(".divTablas.col-md-6").switchClass("col-md-6", "col-md-5", 1000);
 
@@ -148,7 +154,7 @@ window.onload = function () {
         success: function (data) {
             DATA = data;
             var selectsID = data;
-            
+
             //Select tabla1
             $.each(selectsID, function (i, d) {
                 $('#select1').append('<option value="' + d.id + '">'+"Usuario con ID:"+d.id+ '</option>');
@@ -171,7 +177,7 @@ window.onload = function () {
             console.log(e.responseText);
             alert("Error al procesar la petición AJAX de Usuarios.");
         }
-    }); 
+    });
 
 
     // creaObjetosDragables();
@@ -207,7 +213,7 @@ function crearTabla(idDiv) {
         tituloCeldas = "Celda de la tabla 2";
     }
 
-    mytable = $('<table></table>').attr({ id: idTabla });
+    mytable = $('<table></table>').attr({ id: idTabla }).addClass("table bg-info");
     var filas = new Number($("#rowcount").val());
     var columnas = new Number($("#columncount").val());
     var tr = [];
@@ -219,10 +225,10 @@ function crearTabla(idDiv) {
                     drop: function(e, ui){
                         var celda = $(this);
                          dragableInsertData(e,ui, celda);
-                    //    var dragElement = $(ui.draggable[0]); 
+                    //    var dragElement = $(ui.draggable[0]);
                     //     var id = dragElement.data("user").id;
                     // selectUserInfo(id);
-                        
+
                     }
                   }).appendTo(row);
         }
@@ -238,12 +244,12 @@ function deselectCeldas(selector) {
     var celdasSeleccionadas;
     celdasSeleccionadas = $(selector);
     celdasSeleccionadas.toggleClass("selected");
-    
+
     if ($("#tablaid2 .selected").length >= 0 ) {
         $("#oculto2").css("display", "none");
         // $("#borrar2").css("display", "none");
     }
-    
+
     if ($("#tablaid1 .selected").length >= 0 ) {
         $("#oculto1").css("display", "none");
         // $("#borrar1").css("display", "none");
@@ -277,7 +283,7 @@ function borrarTextoCeldas(id) {
     celdas.each(function (i, v) {
         $(this).html("");
         $(this).attr("title", tituloCeldas);
-       
+
     });
 }
 

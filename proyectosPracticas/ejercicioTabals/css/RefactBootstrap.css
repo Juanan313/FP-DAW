@@ -6,10 +6,12 @@
     box-sizing: border-box;
   }
 
+
 header {
     background-color: rgb(40, 66, 0);
     width: 100%;
     height: auto;
+    border-bottom: 2px solid black;
 }
 
 main {
@@ -33,7 +35,7 @@ h1 {
     margin-right: 3px;
 }
 
-button.style {
+/* button.style {
     background-color: rgb(48, 194, 48);
     color: white;
     padding: 14px 20px;
@@ -46,7 +48,7 @@ button.style {
     border-radius: 3px;
     border: 1px solid white;
     font-size: 11px;
-}
+} */
 
 
 
@@ -66,7 +68,6 @@ button.style {
 
 table {
     border: 1px solid #ddd;
-    
     width: 90%;
     height: 90%;
     margin: 0 auto;
@@ -75,15 +76,15 @@ table {
 }
 
 #tablaid1 {
-    background-color: rgb(29, 243, 172);
+    /* background-color: rgb(29, 243, 172); */
     table-layout:fixed;
-    border-collapse: separate !important;
+    /* border-collapse: separate !important; */
 }
 
 #tablaid2 {
-    background-color: steelblue;
+    /* background-color: steelblue; */
     table-layout:fixed;
-    border-collapse: separate !important;
+    /* border-collapse: separate !important; */
 }
 
 td, tr {
@@ -97,7 +98,6 @@ input[type=text]
     color: black;
     height: 28px;
     padding-left: 10px;
-    background-color: greenyellow;
     background-repeat: repeat-x;
     border-radius: 5px;
     border: 0;
@@ -117,8 +117,7 @@ input[type=number]
 }
 
 .selected {
-    border: solid 2px rgb(206, 255, 214);
-    background-color: darkseagreen;
+    background-color: rgba(202, 238, 202, 0.801);
 }
 
 .fila:hover {
@@ -140,10 +139,10 @@ aside {
     height: 50vh;
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 15px;
 }
 
 select {
-    background-color: greenyellow;
     border-radius: 5px;
     width: 65%;
     
@@ -162,15 +161,6 @@ select {
     margin-top:5px;
 }
 
-/* .usersDrag {
-    height: 100px;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    top: 470px;
-    display: none;
-    
-} */
 
 .box {
     height: 55px;
@@ -188,4 +178,42 @@ select {
 
 div.box span{
     vertical-align: middle;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* .mainContainer {
+    max-height: 100%;
+    position: fixed !important;
+    padding: 0px !important;
+    overflow-y: auto;
+}
+
+
+.usersDrag {
+    height: 100px;
+    width: 100%;
+    position: fixed !important;
+    bottom: 0px;
+    padding: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+} */
+
+.noPaddingRight {
+    padding-right: 0 !important;
+ }
+
+ .table td, .table th {
+    padding: 0px !important;
+    vertical-align: middle !important;
+    border-top: 0px solid #dee2e6 !important;
+}
+
+#showhidemenu {
+    margin-top: 10px;
+}
+
+.card-body{
+
+    padding: 0px !important;
 }
