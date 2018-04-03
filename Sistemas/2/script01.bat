@@ -1,0 +1,1 @@
+shutdown -f -s -t 60 -c Sup nigga
