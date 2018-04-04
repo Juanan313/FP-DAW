@@ -1,8 +1,5 @@
-::-Crear un script que utilitzi paràmetres per crear dues carpetes (carpt01 i
-::carpt02), i a dintre de carpt 01, els arxius de text pepet.txt, tomeuet.txt, i de
-::carpt02, els arxius auvesten.txt i acauna.txt.
-::  a) Ha de visualitzar aquesta estructura i després l’ha d’eliminar, i tornar
-::  mostrar. Per a cada acció ha de sortir un missatge indicant el que fa.
+::Modificar l’exercici 3 de forma que comprovi si hem creat les carpetes abans
+:: d’esborrar-les (necessites la instrucció IF)
 @echo off
 
 :crearEstructura
@@ -10,33 +7,37 @@
     cd carpt01
     echo "" > pepe.txt
     echo "" > tomeuet.txt
+    echo "Se ha creado la Carpeta 01 y los ficheros .txt que lo contienen"
     cd ..
     if not exist "%cd%\carpt02\" mkdir carpt02\
     cd carpt02
     echo "" > auvesten.txt
     echo "" > acauna.txt
+    echo "Se ha creado la Carpeta 02 y los ficheros .txt que lo contienen"
     cd ..
 
 :mostrarDirectorio
     if exist carpt01\ (
         echo =========== Mostrando estructura carpt01 ===========
         dir carpt01
+        echo ----------------------------------------------------
     )
     if exist carpt02\ (
         echo =========== Mostrando estructura carpt02 ===========
         dir carpt02
+        echo ----------------------------------------------------
     )
 
 if exist carpt01\ (
     echo =========== VAMOS A BORRAR carpt01 =========== 
- ::   rmdir /q /s carpt01\
+    rmdir /q /s carpt01\
     echo =========== la carpeta carpt01 se ha borrado =========== 
     goto mostrarDirectorio
 )
 
 if exist carpt02\ (
     echo =========== VAMOS A BORRAR carpt02 =========== 
- ::   rmdir /q /s carpt02\
+    rmdir /q /s carpt02\
     echo =========== la carpeta carpt02 se ha borrado =========== 
     goto mostrarDirectorio
 )
