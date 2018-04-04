@@ -227,6 +227,11 @@ window.onload = function () {
     });
 
 
+    // Cargar dialog fancybox al clicar en texto en las tablas
+
+     
+
+
 };
 
 
@@ -353,13 +358,69 @@ function selectUserInfo(id) {
      var dataDrag = {};
      dataDrag.name = dragElement.data("user").name;
      dataDrag.userName = dragElement.data("user").username;
-     dataDrag.geo = dragElement.data("user").address.geo;
+     dataDrag.geo = { lat :  parseFloat(dragElement.data("user").address.geo.lat),
+     lng : parseFloat(dragElement.data("user").address.geo.lng)
+     }   
+    
      dataDrag.id = dragElement.data("user").id;
 
      crearDialogoFancyBox(dataDrag);
 
-     var contenido = $("<div/>").addClass("contenedor dialogFancyBox").html(dataDrag.userName);
-     celda.html(contenido).attr("title", "Usuario con ID: " + dataDrag.id );     
+     var contenido = $("<div/>").data("user", dataDrag).addClass("contenedor dialogFancyBox").html(dataDrag.userName);
+     celda.html(contenido).attr("title", "Usuario con ID: " + dataDrag.id );  
+
+     var map = new google.maps.Map(document.getElementById("map_canvas"), {
+        zoom: 4,
+        center: dataDrag.geo
+    });
+    var marker = new google.maps.Marker({
+        position: dataDrag.geo,
+        map: map
+    })
+    //$('body').on("click",contenido, function(){
+        $.fancybox(map.getDiv(),
+
+         {
+             width: 600,
+             height: 400,
+             margin: 50,
+             autoSize: false,
+             afterShow: function (a, z) {
+                 map.setOptions({
+                     disableDefaultUI: false
+                 })
+                 goo.event.trigger(map, 'resize');
+                 map.setCenter(this.content.data('center'));
+             },
+
+             beforeLoad: function (a) {
+                 this.content.data({
+                     parent: this.content.parent(),
+                     center: map.getCenter()
+                 })
+             },
+
+             beforeClose: function () {
+                 this.content.data({
+                     center: map.getCenter()
+                 })
+
+             },
+             afterClose: function () {
+                 map.setOptions({
+                     disableDefaultUI: true
+                 })
+                 this.content.appendTo(this.content.data('parent')).show();
+                 goo.event.trigger(map, 'resize');
+                 map.setCenter(this.content.data('center'));
+             }
+         });
+    //})
+     
+
+          
+
+        //var id = "user"+e.target.data("user").id;
      
  }
 
@@ -367,16 +428,28 @@ function selectUserInfo(id) {
      if ( $("#user"+dataDrag.id).length >0) {
          return false;
      } else {
-         var dialogoFancybox = $("<div/>").attr("id", "user"+dataDrag.id).hide();
-         dialogoFancybox.html("<div/>").html("ID: "+dataDrag.id+"<br/>"+
+        var dialogoFancybox = $("<div/>").attr("id", "user"+dataDrag.id).hide();
+        dialogoFancybox.html("<div/>").html("ID: "+dataDrag.id+"<br/>"+
         "Nombre: "+dataDrag.name+"<br/>"+
         "UserName: "+dataDrag.userName);
-
+        // $("<div style= width: 500px;height 500px;/>").attr("id", "mapa"+dataDrag.id).appendTo(dialogoFancybox);
+        // cargarMapa("mapa"+dataDrag.id, dataDrag.geo);
         $("body").append(dialogoFancybox);
      }
      
  }
 
+ function cargarMapa(id, geo){
+
+    var map = new google.maps.Map(document.getElementById(id), {
+        zoom: 4,
+        center: geo
+    });
+    var marker = new google.maps.Marker({
+        position: geo,
+        map: map
+    })
+ }
 
  function initMap() {
      console.log("La api de Google maps cargo correctamente");
