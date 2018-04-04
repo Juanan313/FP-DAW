@@ -121,7 +121,7 @@ input[type=number]
 }
 
 .fila:hover {
-    background-color: lightblue;
+    background-color: rgb(193, 253, 136);
 }
 
 div.contenedor {

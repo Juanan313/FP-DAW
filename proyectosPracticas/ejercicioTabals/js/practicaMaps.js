@@ -1,11 +1,17 @@
+
+// Variable global data donde cargaremos los datos obtenidos mediante Ajax
 var DATA = [];
 
+
+    // Cargar todas las funciones en sus respectivos eventos en la función Onload.
+
 window.onload = function () {
+
+    // Opciones para que solo cargue los tooltips de JQueryUI y no los de bootstrap.
 
     $.widget.bridge('uibutton', $.ui.button);
     $.widget.bridge('uitooltip', $.ui.tooltip);
 
-    // Cargar todas las funciones en sus respectivos eventos en la función Onload.
 
 
      $('#datepicker').datepicker({
@@ -18,6 +24,9 @@ window.onload = function () {
     });
 
     $("#dialog1").dialog({ autoOpen: false });
+
+
+    // Botones con sus respectivas funciones
 
     $("#buttonTable1").on("click", function () {
         if ($("#tablaid1 .celda").length == $("#rowcount").val() * $("#columncount").val()) {
@@ -57,41 +66,6 @@ window.onload = function () {
     $("#buttonInsertText1").on("click", function () {
         insertarTexto("insertText1");
     });
-
-    // $("#buttonInsertText2").on("click", function () {
-    //     insertarTexto("insertText2");
-    // });
-
-    $("body").on("click", ".celda", function () {
-
-
-        $(this).toggleClass("selected");
-        if ($(this).closest("#tablaid1").length > 0 || $(this).attr("id") == "tablaid1") {
-            deselectCeldas("#tablaid2 .selected");
-        } else if ($(this).closest("#tablaid2").length > 0 || $(this).attr("id") == "tablaid2") {
-            deselectCeldas("#tablaid1 .selected")
-        }
-
-        if ($("#tablaid2 .selected").length > 0 ) {
-            $("#oculto2").css("display", "inline-block");
-        }
-
-        if ($("#tablaid1 .selected").length > 0 ) {
-            $("#oculto1").css("display", "inline-block");
-        }
-        return false;
-
-
-    });
-
-    $("html").on("click", function (e) {
-
-        var elemento = e.target;
-        var tagElemento = elemento.tagName.toLowerCase();
-
-        if ( tagElemento != "button" && tagElemento != "input" && tagElemento != "aside" && tagElemento != "table" && tagElemento != "select")
-             deselectCeldas("td.selected");
-    })
 
     $("#buttonShowHide1").click(function () {
         $("#tablaid1").toggle("fold", 1000);
@@ -136,6 +110,72 @@ window.onload = function () {
         selectUserInfo("#select2");
     })
 
+    
+    $("#SelectAll1").on("click", function(){
+        var celdas = $("#tablaid1 .celda");
+        $(celdas).toggleClass("selected");
+        
+        if ($("#tablaid2 .selected").length > 0 ) {
+            $("#oculto2").css("display", "inline-block");
+        }
+
+        if ($("#tablaid1 .selected").length > 0 ) {
+            $("#oculto1").css("display", "inline-block");
+        }
+        deselectCeldas("#tablaid2 .selected")
+
+    });
+
+    $("#SelectAll2").on("click", function(){
+        var celdas = $("#tablaid2 .celda");
+        $(celdas).toggleClass("selected");
+        
+        if ($("#tablaid2 .selected").length > 0 ) {
+            $("#oculto2").css("display", "inline-block");
+        }
+
+        if ($("#tablaid1 .selected").length > 0 ) {
+            $("#oculto1").css("display", "inline-block");
+        }
+        deselectCeldas("#tablaid1 .selected")
+
+    });
+
+    // Seleccionar las celdas para modificar, no permite seleccionar celdas de ambas tablas a la vez
+
+    $("body").on("click", ".celda", function () {
+
+        $(this).toggleClass("selected");
+        if ($(this).closest("#tablaid1").length > 0 || $(this).attr("id") == "tablaid1") {
+            deselectCeldas("#tablaid2 .selected");
+        } else if ($(this).closest("#tablaid2").length > 0 || $(this).attr("id") == "tablaid2") {
+            deselectCeldas("#tablaid1 .selected")
+        }
+
+        if ($("#tablaid2 .selected").length > 0 ) {
+            $("#oculto2").css("display", "inline-block");
+        }
+
+        if ($("#tablaid1 .selected").length > 0 ) {
+            $("#oculto1").css("display", "inline-block");
+        }
+        return false;
+
+    });
+
+    // Deseleccionar las celdas al clickar en elementos que no formen parte de las tablas o sus botones
+
+    $("html").on("click", function (e) {
+
+        var elemento = e.target;
+        var tagElemento = elemento.tagName.toLowerCase();
+
+        if ( tagElemento != "button" && tagElemento != "input" && tagElemento != "aside" && tagElemento != "table" && tagElemento != "select")
+             deselectCeldas("td.selected");
+    })
+
+    
+
     $( document ).tooltip({
       position: {
         my: "center bottom-20",
@@ -150,6 +190,8 @@ window.onload = function () {
         }
       }
     });
+
+    // Función Ajax : carga los datos de los usuarios con los que trabajaremos en las tablas.
 
     $.ajax({
         type: "GET",
@@ -184,35 +226,7 @@ window.onload = function () {
         }
     });
 
-    $("#SelectAll1").on("click", function(){
-        var celdas = $("#tablaid1 .celda");
-        $(celdas).toggleClass("selected");
-        
-        if ($("#tablaid2 .selected").length > 0 ) {
-            $("#oculto2").css("display", "inline-block");
-        }
 
-        if ($("#tablaid1 .selected").length > 0 ) {
-            $("#oculto1").css("display", "inline-block");
-        }
-        return false;
-    });
-
-    $("#SelectAll2").on("click", function(){
-        var celdas = $("#tablaid2 .celda");
-        $(celdas).toggleClass("selected");
-        
-        if ($("#tablaid2 .selected").length > 0 ) {
-            $("#oculto2").css("display", "inline-block");
-        }
-
-        if ($("#tablaid1 .selected").length > 0 ) {
-            $("#oculto1").css("display", "inline-block");
-        }
-        return false;
-    });
-
-    // creaObjetosDragables();
 };
 
 
@@ -334,35 +348,38 @@ function selectUserInfo(id) {
         }
 
 
-
-// function creaObjetosDragables() {
-//     $.ajax({
-//         type: "GET",
-//         url: "https://jsonplaceholder.typicode.com/users",
-//         contentType: "application/json; charset=utf-8",
-//         dataType: "jsonp",
-//         success: function (data) {
-//             $.each(data, function (i, v) {
-//                 var userDrag = ($("<div/>").addClass("box").append($("<span/>").append(v.username)).data("user",v).draggable({
-//                     snap: true, opacity: 0.7, cursorAt: { top: -5, left: -5 }
-//                 }));
-//                 $(".usersDrag").append(userDrag);
-//             })
-//         }, error: function (e) {
-//             console.log(e.responseText);
-//             alert("Error al procesar la petición AJAX de Usuarios.");
-//         }
-//     });
-// }
-
  function dragableInsertData(e, ui,celda) {
      var dragElement = $(ui.draggable[0]);
      var dataDrag = {};
      dataDrag.name = dragElement.data("user").name;
      dataDrag.userName = dragElement.data("user").username;
+     dataDrag.geo = dragElement.data("user").address.geo;
      dataDrag.id = dragElement.data("user").id;
-     var contenido = $("<div/>").addClass("contenedor").html(dataDrag.name+"<br/>"+dataDrag.userName);
-     celda.html(contenido).attr("title", "Usuario con ID: " + dataDrag.id );
+
+     crearDialogoFancyBox(dataDrag);
+
+     var contenido = $("<div/>").addClass("contenedor dialogFancyBox").html(dataDrag.userName);
+     celda.html(contenido).attr("title", "Usuario con ID: " + dataDrag.id );     
+     
+ }
+
+ function crearDialogoFancyBox(dataDrag) {
+     if ( $("#user"+dataDrag.id).length >0) {
+         return false;
+     } else {
+         var dialogoFancybox = $("<div/>").attr("id", "user"+dataDrag.id).hide();
+         dialogoFancybox.html("<div/>").html("ID: "+dataDrag.id+"<br/>"+
+        "Nombre: "+dataDrag.name+"<br/>"+
+        "UserName: "+dataDrag.userName);
+
+        $("body").append(dialogoFancybox);
+     }
+     
+ }
+
+
+ function initMap() {
+     console.log("La api de Google maps cargo correctamente");
  }
 
 
