@@ -293,9 +293,12 @@ var DATA = [];
 
     $("#mapStart").fancybox({
         'hideOnContentClick': false, // so you can handle the map
+        'width' : "75%",
+        'height' : '75%',
         'overlayColor'      : '#ccffee',
         'overlayOpacity'    : 0.8,
-        'autoDimensions': true, // the selector #mapcontainer HAS css width and height        
+        'autoDimensions': true, // the selector #mapcontainer HAS css width and height
+        'autoCenter' : true,     
         'onComplete': function(){
           google.maps.event.trigger(map, "resize");
                       $("#fancybox-close").css({"opacity":0.5});
@@ -311,8 +314,14 @@ var DATA = [];
         zoom: 9,
         center: new google.maps.LatLng(49.261226,-123.113928),
         mapTypeId: google.maps.MapTypeId.TERRAIN
-        }   
+        }
+           
        );
+
+       var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(49.261226,-123.113928),
+        map: map
+    })
 });
 
 
