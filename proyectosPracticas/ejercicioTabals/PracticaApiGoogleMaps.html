@@ -14,12 +14,11 @@
     <!-- <link rel="stylesheet" href="js/fancybox/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" /> -->
 
     <!-- Link documentos javaScripts y librerias -->
-    <script src="js/practicaMaps.js"></script>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/moment.min.js"></script>
     <!-- <script type="text/javascript" src="js/fancybox/fancybox/jquery.fancybox-1.3.4.pack.js"></script> -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALmTYHgbNmPYTuU8Np3aCITs8-M_9v8Qc&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALmTYHgbNmPYTuU8Np3aCITs8-M_9v8Qc&callback="></script>
     <script src="fancybox-master/dist/jquery.fancybox.min.js"></script>
     <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
     
@@ -30,6 +29,7 @@
     <div class="col-md-12 bg-success card-header">
         <button id="showhidemenu" class="btn float-left " title="Muestra y oculta el menú de las tablas"><i class="fa fa-bars"></i></button>
         <h1>Ejercicio Tablas</h1>
+        <button class="btn-primary btn-sm float-left" id="mapStart" value="open fancybox" href="#map_canvas">Iniciar Mapa</button>
         <input id="datepicker" width="276" class="floatRight" />
     </div>
     <div class="col-md-12 card-body">
@@ -64,8 +64,10 @@
             <div id="dialog1"></div>
 
         </div>
-    <div class="usersDrag container-fluid col-md-12 d-none bg-success card-footer"></div>
-    <div id="map_canvas" style="width:100%;height:100%"></div>
+    <div class="usersDrag container-fluid col-md-12 d-none bg-success card-footer"></div> 
 </div>
+<div id="map_canvas" class="col-md-12 h-50"></div>
+<script src="js/practicaMaps.js"></script>
+
 </body>
 </html>

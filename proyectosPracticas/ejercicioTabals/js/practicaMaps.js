@@ -5,7 +5,7 @@ var DATA = [];
 
     // Cargar todas las funciones en sus respectivos eventos en la función Onload.
 
-window.onload = function () {
+    $( document ).ready(function() { 
 
     // Opciones para que solo cargue los tooltips de JQueryUI y no los de bootstrap.
 
@@ -226,13 +226,94 @@ window.onload = function () {
         }
     });
 
+    function initialize() {
+        var goo = google.maps,
+            mapOptions = {
+                zoom: 14,
+                center: new goo.LatLng(52.5498783, 13.425209099999961),
+                mapTypeId: goo.MapTypeId.ROADMAP,
+                disableDefaultUI:true
+            },
+            map = new goo.Map(document.getElementById('map_canvas'),
+            mapOptions),
+            marker = new goo.Marker({
+                map: map,
+                position: map.getCenter()
+            });
 
-    // Cargar dialog fancybox al clicar en texto en las tablas
+        // $('#mapStart')
+        //     .prop({
+        //     disabled: false
+        // })
+        //     .click(function () {
 
-     
+        //     $(map.getDiv()).fancybox(
+        //     // $.fancybox(map.getDiv(),
+
+        //     {
+        //         width: 600,
+        //         height: 400,
+        //         margin:50,
+        //         autoSize: false,
+        //         afterShow: function (a, z) {
+        //             map.setOptions({
+        //                 disableDefaultUI: false
+        //             })
+        //             goo.event.trigger(map, 'resize');
+        //             map.setCenter(this.content.data('center'));
+        //         },
+
+        //         beforeLoad: function (a) {
+        //             this.content.data({
+        //                 parent: this.content.parent(),
+        //                 center: map.getCenter()
+        //             })
+        //         },
+
+        //         beforeClose: function () {
+        //             this.content.data({
+        //                 center: map.getCenter()
+        //             })
+
+        //         },
+        //         afterClose: function () {
+        //             map.setOptions({
+        //                 disableDefaultUI: true
+        //             })
+        //             this.content.appendTo(this.content.data('parent')).show();
+        //             goo.event.trigger(map, 'resize');
+        //             map.setCenter(this.content.data('center'));
+        //         }
+        //     });
+
+        // });
+    }
+    initialize();
 
 
-};
+    $("#mapStart").fancybox({
+        'hideOnContentClick': false, // so you can handle the map
+        'overlayColor'      : '#ccffee',
+        'overlayOpacity'    : 0.8,
+        'autoDimensions': true, // the selector #mapcontainer HAS css width and height        
+        'onComplete': function(){
+          google.maps.event.trigger(map, "resize");
+                      $("#fancybox-close").css({"opacity":0.5});
+        },
+        'onCleanup': function() {
+         var myContent = this.href;
+         $(myContent).unwrap();
+        } // fixes inline bug
+       });
+       // map
+       map = new google.maps.Map(
+        document.getElementById("map_canvas"), {
+        zoom: 9,
+        center: new google.maps.LatLng(49.261226,-123.113928),
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+        }   
+       );
+});
 
 
 function cambiarColor(id) {
@@ -353,107 +434,73 @@ function selectUserInfo(id) {
         }
 
 
- function dragableInsertData(e, ui,celda) {
-     var dragElement = $(ui.draggable[0]);
-     var dataDrag = {};
-     dataDrag.name = dragElement.data("user").name;
-     dataDrag.userName = dragElement.data("user").username;
-     dataDrag.geo = { lat :  parseFloat(dragElement.data("user").address.geo.lat),
-     lng : parseFloat(dragElement.data("user").address.geo.lng)
-     }   
+function dragableInsertData(e, ui, celda) {
     
-     dataDrag.id = dragElement.data("user").id;
+    // Cargar datos de Data del elemento Dragable en dataDrag 
+    var dragElement = $(ui.draggable[0]);
+    var dataDrag = {};
+    dataDrag.name = dragElement.data("user").name;
+    dataDrag.userName = dragElement.data("user").username;
+    dataDrag.id = dragElement.data("user").id;
+    dataDrag.geo = {
+        lat: parseFloat(dragElement.data("user").address.geo.lat),
+        lng: parseFloat(dragElement.data("user").address.geo.lng)
+    }
 
-     crearDialogoFancyBox(dataDrag);
+    // Crea contenedor para insertar en la celda dropable
+    var contenido = $("<a/>").data("user", dataDrag).attr("id", "user"+dataDrag.id).attr("href", "#map_canvas").addClass("contenedor dialogFancyBox").html(dataDrag.userName);
+    celda.html(contenido).attr("title", "Usuario con ID: " + dataDrag.id);
 
-     var contenido = $("<div/>").data("user", dataDrag).addClass("contenedor dialogFancyBox").html(dataDrag.userName);
-     celda.html(contenido).attr("title", "Usuario con ID: " + dataDrag.id );  
-
-     var map = new google.maps.Map(document.getElementById("map_canvas"), {
-        zoom: 4,
-        center: dataDrag.geo
-    });
-    var marker = new google.maps.Marker({
-        position: dataDrag.geo,
-        map: map
-    })
-    //$('body').on("click",contenido, function(){
-        $.fancybox(map.getDiv(),
-
-         {
-             width: 600,
-             height: 400,
-             margin: 50,
-             autoSize: false,
-             afterShow: function (a, z) {
-                 map.setOptions({
-                     disableDefaultUI: false
-                 })
-                 goo.event.trigger(map, 'resize');
-                 map.setCenter(this.content.data('center'));
-             },
-
-             beforeLoad: function (a) {
-                 this.content.data({
-                     parent: this.content.parent(),
-                     center: map.getCenter()
-                 })
-             },
-
-             beforeClose: function () {
-                 this.content.data({
-                     center: map.getCenter()
-                 })
-
-             },
-             afterClose: function () {
-                 map.setOptions({
-                     disableDefaultUI: true
-                 })
-                 this.content.appendTo(this.content.data('parent')).show();
-                 goo.event.trigger(map, 'resize');
-                 map.setCenter(this.content.data('center'));
-             }
-         });
-    //})
-     
-
-          
-
-        //var id = "user"+e.target.data("user").id;
+    // convierte el contenido en lanzador fancybox del map con la localizacion del usuario
+    cargarMapa(dataDrag);
      
  }
 
- function crearDialogoFancyBox(dataDrag) {
-     if ( $("#user"+dataDrag.id).length >0) {
-         return false;
-     } else {
-        var dialogoFancybox = $("<div/>").attr("id", "user"+dataDrag.id).hide();
-        dialogoFancybox.html("<div/>").html("ID: "+dataDrag.id+"<br/>"+
-        "Nombre: "+dataDrag.name+"<br/>"+
-        "UserName: "+dataDrag.userName);
-        // $("<div style= width: 500px;height 500px;/>").attr("id", "mapa"+dataDrag.id).appendTo(dialogoFancybox);
-        // cargarMapa("mapa"+dataDrag.id, dataDrag.geo);
-        $("body").append(dialogoFancybox);
-     }
-     
+ function cargarMapa(dataDrag){
+
+    var geo = new google.maps.LatLng(dataDrag.geo.lat,dataDrag.geo.lng);
+    var id = "#user"+dataDrag.id;
+
+
+    $(id).fancybox({
+        'hideOnContentClick': false, // so you can handle the map
+        'overlayColor'      : '#ccffee',
+        'overlayOpacity'    : 0.8,
+        'autoDimensions': true, // the selector #mapcontainer HAS css width and height
+        'onComplete': function(){
+          google.maps.event.trigger(map, "resize");
+                      $("#fancybox-close").css({"opacity":0.5});
+        },
+        'onCleanup': function() {
+         var myContent = this.href;
+         $(myContent).unwrap();
+        } // fixes inline bug
+       });
+       // map
+       map = new google.maps.Map(
+        document.getElementById("map_canvas"), {
+        zoom: 9,
+        center: geo,
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+        }   
+       );
  }
 
- function cargarMapa(id, geo){
 
-    var map = new google.maps.Map(document.getElementById(id), {
-        zoom: 4,
-        center: geo
-    });
-    var marker = new google.maps.Marker({
-        position: geo,
-        map: map
-    })
- }
+// function crearDialogoFancyBox(dataDrag) {
+    //      if ( $("#user"+dataDrag.id).length >0) {
+    //          return false;
+    //      } else {
+    //         var dialogoFancybox = $("<div/>").attr("id", "user"+dataDrag.id).hide();
+    //         dialogoFancybox.html("<div/>").html("ID: "+dataDrag.id+"<br/>"+
+    //         "Nombre: "+dataDrag.name+"<br/>"+
+    //         "UserName: "+dataDrag.userName);
+    //         // $("<div style= width: 500px;height 500px;/>").attr("id", "mapa"+dataDrag.id).appendTo(dialogoFancybox);
+    //         // cargarMapa("mapa"+dataDrag.id, dataDrag.geo);
+    //         $("body").append(dialogoFancybox);
+    //      }
+         
+    //  }
 
- function initMap() {
-     console.log("La api de Google maps cargo correctamente");
- }
 
-
-
+ 
