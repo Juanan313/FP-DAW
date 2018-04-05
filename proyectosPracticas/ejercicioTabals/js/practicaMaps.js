@@ -488,11 +488,16 @@ function dragableInsertData(e, ui, celda) {
        // map
        map = new google.maps.Map(
         document.getElementById("map_canvas"), {
-        zoom: 9,
+        zoom: 4,
         center: geo,
         mapTypeId: google.maps.MapTypeId.TERRAIN
-        }   
+        }
        );
+
+       var marker = new google.maps.Marker({
+        position: geo,
+        map: map
+    })
  }
 
 
