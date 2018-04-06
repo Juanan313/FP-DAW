@@ -240,3 +240,8 @@ a { border: 0 none; outline: 0 none;}
     right: 45px !important;
     color: black !important;
 }
+
+#addUser a {
+    text-decoration: none !important;
+    color: white !important;
+}

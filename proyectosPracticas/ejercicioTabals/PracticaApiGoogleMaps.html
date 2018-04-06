@@ -29,7 +29,7 @@
     <div class="col-md-12 bg-success card-header">
         <button id="showhidemenu" class="btn float-left " title="Muestra y oculta el menú de las tablas"><i class="fa fa-bars"></i></button>
         <h1>Ejercicio Tablas</h1>
-        <button class="btn-primary btn-sm float-left" id="mapStart" value="open fancybox" href="#map_canvas">Iniciar Mapa</button>
+        <!-- <button class="btn-primary btn-sm float-left" id="mapStart" value="open fancybox" href="#map_canvas">Iniciar Mapa</button> -->
         <input id="datepicker" width="276" class="floatRight" />
     </div>
     <div class="col-md-12 card-body">
@@ -37,14 +37,14 @@
             <div class="container noPaddingRight">
                 <button id="buttonColor1" class="btn btn-primary btn-sm m-1" title="Cambia el color de fondo de la tabla 1">Color Fondo 1</button>
                 <button id="buttonColor2" class="btn btn-primary btn-sm m-1 floatRight" title="Cambia el color de fondo de la tabla 2">Color Fondo 2</button>
-                <button id="buttonTable1" class="btn btn-primary btn-sm m-1">Crear tabla</button>
-                <button id="buttonTable2" class="btn btn-primary btn-sm m-1 floatRight">Crear tabla 2</button><br/>
-                <button id="buttonShowHide1" class="btn btn-primary btn-sm m-1">Show/Hide1</button>
-                <button id="buttonShowHide2" class="btn btn-primary btn-sm m-1 floatRight">Show/Hide2</button><br/>
-                <button id="moreInfo1" class="btn btn-primary btn-sm m-1">Más info1</button>
-                <button id="moreInfo2" class="btn btn-primary btn-sm m-1 floatRight">Más info2</button><br/>
-                <button id="SelectAll1" class="btn btn-primary btn-sm m-1">SelectAll1</button>
-                <button id="SelectAll2" class="btn btn-primary btn-sm m-1 floatRight">SelectAll2</button><br/>
+                <button id="buttonTable1" class="btn btn-primary btn-sm m-1" title="Crea 1 tabla en el contenedor izquierdo">Crear tabla</button>
+                <button id="buttonTable2" class="btn btn-primary btn-sm m-1 floatRight" title="Crea 1 tabla en el contenedor derecho">Crear tabla 2</button><br/>
+                <button id="buttonShowHide1" class="btn btn-primary btn-sm m-1" title="Muestra y oculta la tabla izquierda">Show/Hide1</button>
+                <button id="buttonShowHide2" class="btn btn-primary btn-sm m-1 floatRight" title="Muestra y oculta la tabla derecha">Show/Hide2</button><br/>
+                <button id="moreInfo1" class="btn btn-primary btn-sm m-1" title="Muestra cuantas celdas de la tabla izquierda contienen texto">Más info1</button>
+                <button id="moreInfo2" class="btn btn-primary btn-sm m-1 floatRight" title="Muestra cuantas celdas de la tabla derecha contienen texto">Más info2</button><br/>
+                <button id="SelectAll1" class="btn btn-primary btn-sm m-1" title="Selecciona todas las celdas de la tabla izquierda">SelectAll1</button>
+                <button id="SelectAll2" class="btn btn-primary btn-sm m-1 floatRight" title="Selecciona todas las celdas de la tabla derecha">SelectAll2</button><br/>
                 <span>Filas: </span>    <input type="number" id="rowcount" class="floatRight bg-light" value="6"/><br/><br/>
                 <span>Columnas: </span> <input type="number" id="columncount" class="floatRight bg-light" value="6"/><br/><br/>
                 <span>Texto a insertar: </span> <input type="text" id="insertText1" class="floatRight bg-light"><br/>
@@ -64,7 +64,11 @@
             <div id="dialog1"></div>
 
         </div>
-    <div class="usersDrag container-fluid col-md-12 d-none bg-success card-footer"></div> 
+    <div class="usersDrag container-fluid col-md-12 d-none bg-success card-footer">
+        <button class="floatRight btn btn-primary btn-sm m-1" id="addUser">
+            <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+            <a href="PaginaRegistro.html"> Usuario</a></button>
+    </div>
 </div>
 <div id="map_canvas" class="col-md-6 h-50"></div>
 <script src="js/practicaMaps.js"></script>

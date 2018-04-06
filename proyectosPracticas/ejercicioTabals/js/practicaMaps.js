@@ -226,20 +226,20 @@ var DATA = [];
         }
     });
 
-    function initialize() {
-        var goo = google.maps,
-            mapOptions = {
-                zoom: 14,
-                center: new goo.LatLng(52.5498783, 13.425209099999961),
-                mapTypeId: goo.MapTypeId.ROADMAP,
-                disableDefaultUI:true
-            },
-            map = new goo.Map(document.getElementById('map_canvas'),
-            mapOptions),
-            marker = new goo.Marker({
-                map: map,
-                position: map.getCenter()
-            });
+    // function initialize() {
+    //     var goo = google.maps,
+    //         mapOptions = {
+    //             zoom: 14,
+    //             center: new goo.LatLng(52.5498783, 13.425209099999961),
+    //             mapTypeId: goo.MapTypeId.ROADMAP,
+    //             disableDefaultUI:true
+    //         },
+    //         map = new goo.Map(document.getElementById('map_canvas'),
+    //         mapOptions),
+    //         marker = new goo.Marker({
+    //             map: map,
+    //             position: map.getCenter()
+    //         });
 
         // $('#mapStart')
         //     .prop({
@@ -287,8 +287,8 @@ var DATA = [];
         //     });
 
         // });
-    }
-    initialize();
+    // }
+    // initialize();
 
 
     $("#mapStart").fancybox({
