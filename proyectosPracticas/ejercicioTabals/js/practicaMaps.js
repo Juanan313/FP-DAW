@@ -297,6 +297,7 @@ var DATA = [];
         'height' : '75%',
         'overlayColor'      : '#ccffee',
         'overlayOpacity'    : 0.8,
+        touch :false,
         'autoDimensions': true, // the selector #mapcontainer HAS css width and height
         'autoCenter' : true,     
         'onComplete': function(){
@@ -472,10 +473,14 @@ function dragableInsertData(e, ui, celda) {
 
 
     $(id).fancybox({
+        // helpers : { 
+        //     title : { type : 'inside' }
+        //    },
         'hideOnContentClick': false, // so you can handle the map
         'overlayColor'      : '#ccffee',
         'overlayOpacity'    : 0.8,
         'autoDimensions': true, // the selector #mapcontainer HAS css width and height
+        touch :false,
         'onComplete': function(){
           google.maps.event.trigger(map, "resize");
                       $("#fancybox-close").css({"opacity":0.5});
@@ -483,7 +488,10 @@ function dragableInsertData(e, ui, celda) {
         'onCleanup': function() {
          var myContent = this.href;
          $(myContent).unwrap();
-        } // fixes inline bug
+        }/*, // fixes inline bug
+        afterLoad : function() {
+            this.title = "Nombre: "+dataDrag.name+" User: "+dataDrag.username+" ID: "+dataDrag.id ;
+           }*/
        });
        // map
        map = new google.maps.Map(

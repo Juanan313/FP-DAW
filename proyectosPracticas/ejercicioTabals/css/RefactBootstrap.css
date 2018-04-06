@@ -179,6 +179,12 @@ select {
 div.box span{
     vertical-align: middle;
     font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: azure;
+}
+
+.dialogFancyBox {
+    color: azure;
 }
 
 /* .mainContainer {
@@ -228,4 +234,9 @@ div.box span{
 #wrap {width: 800px; margin: 0 auto;}
 a { border: 0 none; outline: 0 none;}
 #mapcontainer {width: 600px; height: 320px;} 
-#map_canvas {width: 100%; height: 100%;}
+#map_canvas {width: 50%; height: 100%;}
+
+.fancybox-close-small {
+    right: 45px !important;
+    color: black !important;
+}
